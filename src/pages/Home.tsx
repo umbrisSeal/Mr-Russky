@@ -1,6 +1,9 @@
 import React from 'react'
 
-type Props = {}
+
+type Props = {
+    //qty: number,
+};
 
 function Home({}: Props) {
     return(
