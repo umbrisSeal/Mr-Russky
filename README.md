@@ -3,7 +3,7 @@
 <!-- Main Logo -->
 <div align="center">
 	<br>
-	<img src="https://i.ibb.co/rfpdbfW3/Mr-Russky-Logo-v2-bigger3.png" width="400" alt="Mr. Russky Logo"/>
+	<img src="/public/logo.png" width="400" alt="Mr. Russky Logo"/>
 </div>
 <!-- Version Badge -->
 <div align="center">
@@ -106,7 +106,7 @@ This is an open source educational project. Contributions of any kind are welcom
 	```
 4. Start the development enviroment:
 	```bash
-	npm run nodemon
+	npm run dev
 	```
 5. Make your changes and submit a Pull Request.
 
@@ -153,7 +153,7 @@ I deeply appreciate and respect the Russian language and people. If at any point
 <!-- Main Logo -->
 <div align="center">
 	<br>
-	<img src="https://i.ibb.co/rfpdbfW3/Mr-Russky-Logo-v2-bigger3.png" width="400" alt="Mr. Russky Logo"/>
+	<img src="./public/logo.png" width="400" alt="Mr. Russky Logo"/>
 </div>
 <!-- Version Badge -->
 <div align="center">
@@ -256,7 +256,7 @@ Este es un proyecto Open Source educativo. ¡Las contribuciones de cualquier tip
 	```
 4. Inicia el entorno de desarrollo:
 	```bash
-	npm run nodemon
+	npm run dev
 	```
 5. Realiza tus cambios y envía un Pull Request.
 
