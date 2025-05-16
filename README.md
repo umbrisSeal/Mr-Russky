@@ -1,5 +1,5 @@
 <!-- English Version -->
-<!-- new url: src="public/images/logo.png -->
+
 <!-- Main Logo -->
 <div align="center">
 	<br>
@@ -15,7 +15,7 @@
     <a href="#english">
         <img src="https://img.shields.io/badge/English-c1121f" alt="English Here">
     </a>
-    <!-- &nbsp; -->
+    &nbsp;
     <a href="#español">
         <img src="https://img.shields.io/badge/Espa%C3%B1ol-c1121f" alt="Español Aquí">
     </a>
@@ -80,7 +80,7 @@ This project is my way of showing appreciation for the Russian language and cont
 <!-- Seccion: Estructura del proyecto (futuro) -->
 <!-- <br> -->
 
-## :bulb: How to Contribute?:
+## :bulb: How to Contribute:
 
 This is an open source educational project. Contributions of any kind are welcome!
 
@@ -130,7 +130,7 @@ I deeply appreciate and respect the Russian language and people. If at any point
 
 ## 🙌 Credits:
 
-- Images legally extracted from [Wikimedia Commons](https://commons.wikimedia.org) y [OpenMoji](https://openmoji.org).
+- Images legally extracted from [Wikimedia Commons](https://commons.wikimedia.org) and [OpenMoji](https://openmoji.org).
 - Inspired by the idea of facilitating language learning with images and active practice.
 
 <br>
@@ -165,7 +165,7 @@ I deeply appreciate and respect the Russian language and people. If at any point
     <a href="#english">
         <img src="https://img.shields.io/badge/English-c1121f" alt="English Here">
     </a>
-    <!-- &nbsp; -->
+    &nbsp;
     <a href="#español">
         <img src="https://img.shields.io/badge/Espa%C3%B1ol-c1121f" alt="Español Aquí">
     </a>
@@ -230,7 +230,7 @@ Este proyecto es una forma de mostrar mi aprecio por el idioma ruso y contribuir
 <!-- Seccion: Estructura del proyecto (futuro) -->
 <!-- <br> -->
 
-## :bulb: ¿Cómo Contribuir?:
+## :bulb: Como Contribuir:
 
 Este es un proyecto Open Source educativo. ¡Las contribuciones de cualquier tipo son bienvenidas!. Puedes ayudar:
 
