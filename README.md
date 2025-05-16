@@ -1,5 +1,5 @@
 <!-- English Version -->
-
+<!-- new url: src="public/images/logo.png -->
 <!-- Main Logo -->
 <div align="center">
 	<br>
@@ -12,23 +12,25 @@
 </div>
 <!-- MD File Languages -->
 <div align="center">
-    <a href="#mr-russky---a-russian-vocab-app">
+    <a href="#english">
         <img src="https://img.shields.io/badge/English-c1121f" alt="English Here">
     </a>
     <!-- &nbsp; -->
-    <a href="#mr-russky---una-aplicacion-de-vocabulario-ruso">
+    <a href="#español">
         <img src="https://img.shields.io/badge/Espa%C3%B1ol-c1121f" alt="Español Aquí">
     </a>
 </div>
 
+<br>
 
+# English
 # :ru: Mr Russky - A Russian Vocab App
 
 A 100% Frontend web application for learning basic Russian vocabulary through images and interactive exercises. Designed especifically for beginners, it includes categories such as: nouns, verbs and adjetives.
 
 <br>
 
-## :closed_book: About the Project:
+## :question: About the Project:
 
 The main reason behind this project steams from a personal observation: unlike English, the Russian language lacks sufficient accessible, structured, and adapted learning materials —especially for Spanish-speaking learners. English has been globally adpoted in many ways, and learning resources for it have grown exponentially. In contrast, other languages like Russian often face significant difficulties when it comes to developing and distributing quality educational content.
 
@@ -40,7 +42,7 @@ This project is my way of showing appreciation for the Russian language and cont
 
 <br>
 
-## :sparkler: Characteristics:
+## :star2: Characteristics:
 
 - Vocabulary organized by parts of speech (nouns, verbs, adjectives).
 - Translations in Spanish and English
@@ -160,22 +162,25 @@ I deeply appreciate and respect the Russian language and people. If at any point
 </div>
 <!-- MD File Languages -->
 <div align="center">
-    <a href="#mr-russky---a-russian-vocab-app">
+    <a href="#english">
         <img src="https://img.shields.io/badge/English-c1121f" alt="English Here">
     </a>
     <!-- &nbsp; -->
-    <a href="#mr-russky---una-aplicacion-de-vocabulario-ruso">
+    <a href="#español">
         <img src="https://img.shields.io/badge/Espa%C3%B1ol-c1121f" alt="Español Aquí">
     </a>
 </div>
 
+<br>
+
+# Español
 # :ru: Mr Russky - Una Aplicación de Vocabulario Ruso
 
 Una aplicación web 100% Frontend para aprender vocabulario básico del idioma ruso a través de imágenes y ejercicios interactivos. Diseñada especialmente para principiantes con categorías como sustantivos, verbos y adjetivos.
 
 <br>
 
-## :closed_book: Acerca del Proyecto:
+## :question: Acerca del Proyecto:
 
 El propósito principal de este proyecto nace de una observación personal: a diferencia del inglés, el idioma ruso no cuenta con suficiente material accesible, estructurado y adaptado para estudiantes hispanohablantes. Mientras que el inglés ha sido adoptado globalmente y goza de una abundancia de recursos de aprendizaje, muchos otros idiomas —como el ruso— enfrentan una notable falta de contenidos educativos modernos, especialmente pensados desde otras lenguas que no sean el inglés.
 
@@ -187,7 +192,7 @@ Este proyecto es una forma de mostrar mi aprecio por el idioma ruso y contribuir
 
 <br>
 
-## :sparkler: Caracteristicas:
+## :star2: Caracteristicas:
 
 - Vocabulario organizado por categorías gramaticales (nombres, verbos, adjetivos)
 - Traducciones en español e inglés.
