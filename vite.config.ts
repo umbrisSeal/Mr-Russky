@@ -3,11 +3,12 @@ import react from '@vitejs/plugin-react'
 
 import tailwindcss from '@tailwindcss/vite'
 
+
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig( ({mode}) => ({
     plugins: [react(), tailwindcss()],
-    base: '/Mr-Russky/',
+    base: mode === 'production' ? '/Mr-Russky/' : '/',
     build: {
         outDir: 'docs'  // For github pages.
     }
-})
+}));
