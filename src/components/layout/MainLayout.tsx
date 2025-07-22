@@ -1,10 +1,12 @@
 //import React from 'react'
-import { Outlet, useNavigate } from 'react-router';
+import { Outlet, useLocation, useNavigate } from 'react-router';
+import { AnimatePresence } from 'framer-motion';
 
 import appLogo from '../../assets/img/logo.svg';
 
 function MainLayout() {
     const navigateTo = useNavigate();
+    const location = useLocation();
 
     function handleLogoClick() {
         // Maybe add a confirmation button in the future.
@@ -23,7 +25,9 @@ function MainLayout() {
                 />
             </header>
             <main className='flex-1'>
-                <Outlet />
+                <AnimatePresence mode='wait'>
+                    <Outlet key={location.pathname} />
+                </AnimatePresence>
             </main>
         </div>
     )
