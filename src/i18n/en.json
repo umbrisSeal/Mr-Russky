@@ -3,6 +3,9 @@
         "homePage": {
             "welcomeMessage": "Welcome to Mr. Russky!",
             "title": "Practice and learn new russian vocabulary."
+        },
+        "wordDatabasePage": {
+            "title": "Vocabulary count by Category and Group."
         }
     },
     "components": {
@@ -15,6 +18,10 @@
                 "vocabularyDB": "Vocabulary Database",
                 "swapLanguage": "Cambiar a Español"
             }
+        },
+        "tags": {
+            "tagGroupPrefix": "Group",
+            "tagTotalPrefix": "Total"
         }
     }
 }
