@@ -37,6 +37,7 @@ export const exampleNouns: Noun[] = [
             ru: "",
             es: "",
             en: ""
-        }
+        },
+        verified: false
     }
 ];

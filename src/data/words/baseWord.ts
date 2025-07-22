@@ -19,6 +19,7 @@ export type BaseWord = {
     imageUrl: string;           // URL of the image shown. For now, only from Wiki Commons.
     difficulty: number;         // Int number from 1 to 10. Used in future for difficulty level.
     example: Example;           // Example list using the word in russian, spanish and english sentences.
+    verified: boolean;          // Indicates if translations are verified. Words not verified will not be shown in app lessons.
     notes?: string;             // Optional notes, in english for this word.
     // transliteration          // For future phonetic sound.
 };
