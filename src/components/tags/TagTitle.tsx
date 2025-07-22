@@ -1,6 +1,6 @@
 //import React from 'react'
 import { useTranslation } from 'react-i18next';
-import type { TagProps } from './TagTypes'
+import type { TagProps } from './tagTypes'
 import { Box } from '@mui/material';
 
 const classMap: Record<string, string> = {
