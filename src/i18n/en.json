@@ -12,7 +12,8 @@
                 "topNouns": "Top 500 Nouns",
                 "topVerbs": "Top 500 Verbs",
                 "topWords": "Top 1,000 Words",
-                "vocabularyDB": "Vocabulary Database"
+                "vocabularyDB": "Vocabulary Database",
+                "swapLanguage": "Cambiar a Español"
             }
         }
     }

@@ -12,7 +12,8 @@
                 "topNouns": "Top 500 Sustantivos",
                 "topVerbs": "Top 500 Verbos",
                 "topWords": "Top 1,000 Palabras",
-                "vocabularyDB": "Cantidad de Vocabulario"
+                "vocabularyDB": "Cantidad de Vocabulario",
+                "swapLanguage": "Switch to English"
             }
         }
     }
