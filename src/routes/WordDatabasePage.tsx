@@ -2,15 +2,18 @@
 import { Box } from "@mui/material";
 import PageMotionWrapper from "../components/layout/PageMotionWrapper";
 import TagTitle from "../components/tags/TagTitle";
+import { useTranslation } from "react-i18next";
 
 function WordDatabasePage() {
+    const { t } = useTranslation();
+
     return (
         <PageMotionWrapper>
             <Box className=''>
                 { /* Title and Tags */ }
                 <Box className='flex flex-col items-center gap-6 p-6'>
                     <h1 className="font-bold text-accent text-3xl text-center">
-                        Cantidad de Vocabulario por Categoria y Grupo
+                        {t('pages.wordDatabasePage.title')}
                     </h1>
                     <Box className='flex flex-wrap justify-center gap-4'>
                         <TagTitle tagGroup="A" />
