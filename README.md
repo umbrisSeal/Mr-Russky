@@ -75,7 +75,7 @@ This project is my way of showing appreciation for the Russian language and cont
 <br>
 
 ## :computer: Online Demo:
-👉 [Try The Web App Now!](https://umbrisseal.github.io/Mr-Russky/) -->
+👉 [Try The Web App Now!](https://umbrisseal.github.io/Mr-Russky/)
 <!-- Screenshots de la aplicacion -->
 <!-- Seccion: Estructura del proyecto (futuro) -->
 <!-- <br> -->
