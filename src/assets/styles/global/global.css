@@ -8,4 +8,40 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+
+    --primary: #003049;
+    --secondary: #669BBC;
+
+    --accent: #FDF0D5;
+    --accent2: #780000;
+    --accent3: #C1121F;
+}
+
+
+/* Background Colors */
+.bg-primary {
+    background-color: var(--primary);
+}
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+
+/* Text Colors */
+.text-primary {
+    color: var(--primary);
+}
+.text-secondary {
+    color: var(--secondary);
+}
+.text-accent {
+    color: var(--accent);
+}
+
+/* Border Colors */
+.border-primary {
+    border-color: var(--primary);
+}
+.border-secondary {
+    border-color: var(--secondary);
 }
