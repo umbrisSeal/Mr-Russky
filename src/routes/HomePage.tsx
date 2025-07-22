@@ -7,7 +7,12 @@ import PrimaryOptionButton from '../components/buttons/PrimaryOptionButton';
 import SecondaryOptionButton from '../components/buttons/SecondaryOptionButton';
 
 function HomePage() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    function handleSwitchLanguage() {
+        const newLanguage = i18n.language === 'es' ? 'en' : 'es';
+        i18n.changeLanguage(newLanguage);
+    };
 
     return (
         <Box className='min-h-screen flex flex-col items-center justify-center space-y-8'>
@@ -27,7 +32,12 @@ function HomePage() {
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.topNouns')} />
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.topVerbs')} />
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.topWords')} />
+                {
+                /*
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.vocabularyDB')} />
+                */
+                }
+                <SecondaryOptionButton buttonMessage={t('components.buttons.options.swapLanguage')} onClickFn={handleSwitchLanguage} />
             </Box>
 
         </Box>
