@@ -74,8 +74,8 @@ This project is my way of showing appreciation for the Russian language and cont
 
 <br>
 
-<!-- ## :computer: Demo en Línea: -->
-<!-- 👉 [Ir a la Aplicacion en Vivo](www.google.com) -->
+## :computer: Online Demo:
+👉 [Try The Web App Now!](https://umbrisseal.github.io/Mr-Russky/) -->
 <!-- Screenshots de la aplicacion -->
 <!-- Seccion: Estructura del proyecto (futuro) -->
 <!-- <br> -->
@@ -224,8 +224,8 @@ Este proyecto es una forma de mostrar mi aprecio por el idioma ruso y contribuir
 
 <br>
 
-<!-- ## :computer: Demo en Línea: -->
-<!-- 👉 [Ir a la Aplicacion en Vivo](www.google.com) -->
+## :computer: Demo en Línea:
+👉 [Ir a la Aplicacion en Vivo](https://umbrisseal.github.io/Mr-Russky/)
 <!-- Screenshots de la aplicacion -->
 <!-- Seccion: Estructura del proyecto (futuro) -->
 <!-- <br> -->
