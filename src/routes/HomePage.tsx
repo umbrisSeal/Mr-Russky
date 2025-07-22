@@ -1,7 +1,9 @@
-import React from 'react'
+//import React from 'react'
 import { Box } from '@mui/material';
 
 import appLogo from '../assets/img/logo.svg';
+import PrimaryOptionButton from '../components/buttons/PrimaryOptionButton';
+import SecondaryOptionButton from '../components/buttons/SecondaryOptionButton';
 
 function HomePage() {
     return (
@@ -9,7 +11,7 @@ function HomePage() {
             <img
                 src={appLogo}
                 alt='Mr-Russky Logo'
-                className='w-140'
+                className='w-100'
             />
 
             <Box className='text-center'>
@@ -17,13 +19,14 @@ function HomePage() {
                 <p className='text-accent'> Practica y aprende nuevo vocabulario ruso. </p>
             </Box>
 
-            <Box>
-                <p> Button 1 </p>
-                <p> Button 2 </p>
-                <p> Button 3 </p>
+            <Box className='flex flex-col gap-3 items-center'>
+                <PrimaryOptionButton buttonMessage='Practica Personalizada' />
+                <SecondaryOptionButton buttonMessage='Top 500 Sustantivos' />
+                <SecondaryOptionButton buttonMessage='Top 500 Verbos' />
+                <SecondaryOptionButton buttonMessage='Top 1,000 Palabras' />
+                <SecondaryOptionButton buttonMessage='Cantidad de Vocabulario' />
             </Box>
-
-
+            
         </Box>
     );
 }
