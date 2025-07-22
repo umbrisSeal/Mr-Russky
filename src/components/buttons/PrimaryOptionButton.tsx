@@ -1,10 +1,8 @@
 import { Box, ButtonBase } from '@mui/material';
-import React from 'react'
 
 import type { ButtonProps } from './buttonTypes';
 
-
-function PrimaryOptionButton({ buttonMessage = "Message not defined", onClickFn = () => console.log("OnClick function not defined.") } : ButtonProps) {
+function PrimaryOptionButton({ buttonMessage = "Message not defined.", onClickFn = () => console.log("OnClick function not defined.") } : ButtonProps) {
 
     return (
         <Box className='w-full bg-secondary rounded-xl shadow-md/20 overflow-hidden'>
