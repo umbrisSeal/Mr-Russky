@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    background-color: black;
+    background-color: var(--primary);
     color: white;
 
     font-family: "Overpass", sans-serif;
