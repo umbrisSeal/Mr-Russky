@@ -46,6 +46,9 @@
 .text-accent {
     color: var(--accent);
 }
+.text-accent3 {
+    color: var(--accent3);
+}
 
 /* Border Colors */
 .border-primary {
