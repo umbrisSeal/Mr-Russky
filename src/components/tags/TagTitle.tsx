@@ -4,9 +4,9 @@ import type { TagProps } from './tagTypes'
 import { Box } from '@mui/material';
 
 const classMap: Record<string, string> = {
-    A: 'bg-accent2',
-    B: 'bg-accent3',
-    C: 'bg-secondary',
+    A: 'bg-accent2 text-accent',
+    B: 'bg-accent3 text-accent',
+    C: 'bg-secondary text-accent',
     Total: 'bg-accent text-accent3'
 };
 
