@@ -1,1 +1,19 @@
-{}
+{
+    "pages": {
+        "homePage": {
+            "welcomeMessage": "Welcome to Mr. Russky!",
+            "title": "Practice and learn new russian vocabulary."
+        }
+    },
+    "components": {
+        "buttons": {
+            "options": {
+                "customLesson": "Custom Lesson",
+                "topNouns": "Top 500 Nouns",
+                "topVerbs": "Top 500 Verbs",
+                "topWords": "Top 1,000 Words",
+                "vocabularyDB": "Vocabulary Database"
+            }
+        }
+    }
+}
