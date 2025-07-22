@@ -1,6 +1,7 @@
 //import React from 'react'
 import { Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router';
 
 import appLogo from '../assets/img/logo.svg';
 import PrimaryOptionButton from '../components/buttons/PrimaryOptionButton';
@@ -8,6 +9,11 @@ import SecondaryOptionButton from '../components/buttons/SecondaryOptionButton';
 
 function HomePage() {
     const { t, i18n } = useTranslation();
+    const navigateTo = useNavigate();
+
+    function handleVocabularyButton() {
+        navigateTo('/vocabulary');
+    };
 
     function handleSwitchLanguage() {
         const newLanguage = i18n.language === 'es' ? 'en' : 'es';
@@ -32,11 +38,7 @@ function HomePage() {
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.topNouns')} />
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.topVerbs')} />
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.topWords')} />
-                {
-                /*
-                <SecondaryOptionButton buttonMessage={t('components.buttons.options.vocabularyDB')} />
-                */
-                }
+                <SecondaryOptionButton buttonMessage={t('components.buttons.options.vocabularyDB')} onClickFn={handleVocabularyButton} />
                 <SecondaryOptionButton buttonMessage={t('components.buttons.options.swapLanguage')} onClickFn={handleSwitchLanguage} />
             </Box>
 
