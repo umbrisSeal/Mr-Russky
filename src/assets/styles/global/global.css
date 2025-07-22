@@ -25,6 +25,15 @@
 .bg-secondary {
     background-color: var(--secondary);
 }
+.bg-accent {
+    background-color: var(--accent);
+}
+.bg-accent2 {
+    background-color: var(--accent2);
+}
+.bg-accent3 {
+    background-color: var(--accent3);
+}
 
 
 /* Text Colors */
