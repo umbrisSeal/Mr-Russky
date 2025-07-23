@@ -25,6 +25,10 @@
         "tags": {
             "tagGroupPrefix": "Grupo",
             "tagTotalPrefix": "Total"
+        },
+        "answersContainer": {
+            "containerCorrect": "Correcto",
+            "containerIncorrect": "Incorrecto"
         }
     },
     "global": {
