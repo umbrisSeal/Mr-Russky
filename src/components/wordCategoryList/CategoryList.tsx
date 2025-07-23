@@ -1,18 +1,8 @@
 import React from 'react'
 
 import { Box } from "@mui/material"
+import type { CategoryListProps } from './categoryListTypes';
 
-type SubGroupData = {
-    subGroupName: string;
-    wordsInA: number;
-    wordsInB: number;
-    wordsInC: number;
-}
-
-type CategoryListProps = {
-    categoryName: string;
-    subGroups: SubGroupData[];
-};
 
 function CategoryList({ categoryName = "Category name not defined.", subGroups } : CategoryListProps) {
     function formatNumberWithCommas(number: number): string {
