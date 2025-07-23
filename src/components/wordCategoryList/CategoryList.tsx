@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box } from "@mui/material"
 import type { CategoryListProps } from './categoryListTypes';
-import { formatNumberWithCommas } from '../../utils/functions/formatNumberWithCommas';
+import TagCounter from '../tags/TagCounter';
 
 
 function CategoryList({ categoryName = "Category name not defined.", subGroups } : CategoryListProps) {
@@ -18,10 +18,10 @@ function CategoryList({ categoryName = "Category name not defined.", subGroups }
                         return (
                             <React.Fragment key={row.subGroupName + index}>
                                 <p className="text-left"> {row.subGroupName} </p>
-                                <p className="pt-0.5 rounded-md text-center font-bold bg-accent2"> {formatNumberWithCommas(row.wordsInA)} </p>
-                                <p className="pt-0.5 rounded-md text-center font-bold bg-accent3"> {formatNumberWithCommas(row.wordsInB)} </p>
-                                <p className="pt-0.5 rounded-md text-center font-bold bg-secondary"> {formatNumberWithCommas(row.wordsInC)} </p>
-                                <p className="pt-0.5 rounded-md text-center font-bold bg-accent text-accent3"> {formatNumberWithCommas(totalWordsInRow)} </p>
+                                <TagCounter tagGroup='A' counter={row.wordsInA} />
+                                <TagCounter tagGroup='B' counter={row.wordsInB} />
+                                <TagCounter tagGroup='C' counter={row.wordsInC} />
+                                <TagCounter tagGroup='Total' counter={totalWordsInRow} />
                             </React.Fragment>
                         )
                     })
