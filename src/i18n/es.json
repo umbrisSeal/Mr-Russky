@@ -23,5 +23,27 @@
             "tagGroupPrefix": "Grupo",
             "tagTotalPrefix": "Total"
         }
+    },
+    "global": {
+        "wordTypes": {
+            "inflected": {
+                "categoryName": "Con Flexion",
+                "adjectives": "Adjetivos",
+                "gerunds": "Gerundios",
+                "nouns": "Sustantivos",
+                "numerals": "Numerales",
+                "participles": "Participios",
+                "pronouns": "Pronombres",
+                "verbs": "Verbos"
+            },
+            "invariable": {
+                "categoryName":"Sin Flexion",
+                "adverbs": "Adverbios",
+                "conjunctions": "Conjunciones",
+                "interjections": "Interjecciones",
+                "particles": "Particulas",
+                "prepositions": "Preposiciones"
+            }
+        }
     }
 }

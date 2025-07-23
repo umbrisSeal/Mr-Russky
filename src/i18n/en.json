@@ -23,5 +23,27 @@
             "tagGroupPrefix": "Group",
             "tagTotalPrefix": "Total"
         }
+    },
+    "global": {
+        "wordTypes": {
+            "inflected": {
+                "categoryName": "Inflected",
+                "adjectives": "Adjectives",
+                "gerunds": "Gerunds",
+                "nouns": "Nouns",
+                "numerals": "Numerals",
+                "participles": "Particles",
+                "pronouns": "Pronouns",
+                "verbs": "Verbs"
+            },
+            "invariable": {
+                "categoryName": "Invariable",
+                "adverbs": "Adverbs",
+                "conjunctions": "Conjunctions",
+                "interjections": "Interjections",
+                "particles": "Particles",
+                "prepositions": "Prepositions"
+            }
+        }
     }
 }
