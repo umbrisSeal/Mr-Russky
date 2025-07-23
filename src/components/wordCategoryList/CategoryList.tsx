@@ -2,13 +2,10 @@ import React from 'react'
 
 import { Box } from "@mui/material"
 import type { CategoryListProps } from './categoryListTypes';
+import { formatNumberWithCommas } from '../../utils/functions/formatNumberWithCommas';
 
 
 function CategoryList({ categoryName = "Category name not defined.", subGroups } : CategoryListProps) {
-    function formatNumberWithCommas(value: number): string {
-        return value.toLocaleString('en-US');
-    };
-
     return (
         <Box className='text-accent'>
             <h3 className="text-center text-lg font-bold"> {categoryName} </h3>
