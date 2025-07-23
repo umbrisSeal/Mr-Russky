@@ -2,6 +2,7 @@
 
 import { Box } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import TagWord from "../tags/TagWord";
 
 // AnwsersContainer Props
 /*
@@ -27,13 +28,11 @@ function AnswersContainer({containerCorrect = false} : AnswersContainerProps ) {
 
             {/* List of Answers */}
             <Box className='flex flex-wrap gap-1'>
-                <p className="bg-purple-600"> Word </p>
-                <p className="bg-purple-600"> Word </p>
-                <p className="bg-purple-600"> Word </p>
-                <p className="bg-purple-600"> Word </p>
-                <p className="bg-purple-600"> Word </p>
-                <p className="bg-purple-600"> Word </p>
-                <p className="bg-purple-600"> Word </p>
+                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
+                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
+                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
+                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
+                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
             </Box>
 
         </Box>
