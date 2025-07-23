@@ -27,8 +27,8 @@
             "tagTotalPrefix": "Total"
         },
         "answersContainer": {
-            "containerCorrect": "Correcto",
-            "containerIncorrect": "Incorrecto"
+            "correct": "Correcto",
+            "incorrect": "Incorrecto"
         }
     },
     "global": {
