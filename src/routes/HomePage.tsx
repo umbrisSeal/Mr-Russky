@@ -21,6 +21,11 @@ function HomePage() {
         i18n.changeLanguage(newLanguage);
     };
 
+    function dummy() {
+        // Temporal function just to enter "/lesson".
+        navigateTo('/lesson');
+    }
+
     return (
         <PageMotionWrapper>
             <Box className='min-h-screen flex flex-col items-center justify-center space-y-8'>
@@ -36,7 +41,7 @@ function HomePage() {
                 </Box>
 
                 <Box className='flex flex-col gap-3 items-center'>
-                    <PrimaryOptionButton buttonMessage={t('components.buttons.options.customLesson')} />
+                    <PrimaryOptionButton buttonMessage={t('components.buttons.options.customLesson')} onClickFn={dummy} />
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.topNouns')} />
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.topVerbs')} />
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.topWords')} />
