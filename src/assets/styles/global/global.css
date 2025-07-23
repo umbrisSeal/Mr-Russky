@@ -63,6 +63,9 @@
 .border-secondary {
     border-color: var(--secondary);
 }
+.border-accent3 {
+    border-color: var(--accent3);
+}
 .border-green {
     border-color: var(--green);
 }
