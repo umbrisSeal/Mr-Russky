@@ -21,10 +21,10 @@ function CategoryList({ categoryName = "Category name not defined.", subGroups }
                         return (
                             <React.Fragment key={row.subGroupName + index}>
                                 <p className="text-left"> {row.subGroupName} </p>
-                                <p className="rounded-md text-center font-bold bg-accent2"> {formatNumberWithCommas(row.wordsInA)} </p>
-                                <p className="rounded-md text-center font-bold bg-accent3"> {formatNumberWithCommas(row.wordsInB)} </p>
-                                <p className="rounded-md text-center font-bold bg-secondary"> {formatNumberWithCommas(row.wordsInC)} </p>
-                                <p className="rounded-md text-center font-bold bg-accent text-accent3"> {formatNumberWithCommas(totalWordsInRow)} </p>
+                                <p className="pt-0.5 rounded-md text-center font-bold bg-accent2"> {formatNumberWithCommas(row.wordsInA)} </p>
+                                <p className="pt-0.5 rounded-md text-center font-bold bg-accent3"> {formatNumberWithCommas(row.wordsInB)} </p>
+                                <p className="pt-0.5 rounded-md text-center font-bold bg-secondary"> {formatNumberWithCommas(row.wordsInC)} </p>
+                                <p className="pt-0.5 rounded-md text-center font-bold bg-accent text-accent3"> {formatNumberWithCommas(totalWordsInRow)} </p>
                             </React.Fragment>
                         )
                     })
