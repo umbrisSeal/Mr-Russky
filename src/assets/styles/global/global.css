@@ -55,6 +55,9 @@
 .text-accent3 {
     color: var(--accent3);
 }
+.text-green {
+    color: var(--green);
+}
 
 /* Border Colors */
 .border-primary {
