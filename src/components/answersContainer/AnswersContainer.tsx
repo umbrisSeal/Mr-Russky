@@ -13,9 +13,10 @@ import TagWord from "../tags/TagWord";
 
 type AnswersContainerProps = {
     containerCorrect: boolean;      // True if it storages correct anwsers, false otherwise.
+    wordsArray: string[];           // String of initial words shown in this component.
 };
 
-function AnswersContainer({containerCorrect = false} : AnswersContainerProps ) {
+function AnswersContainer({containerCorrect = false, wordsArray = []} : AnswersContainerProps ) {
     const { t } = useTranslation();
 
     return (
@@ -28,11 +29,7 @@ function AnswersContainer({containerCorrect = false} : AnswersContainerProps ) {
 
             {/* List of Answers */}
             <Box className='flex flex-wrap gap-1'>
-                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
-                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
-                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
-                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
-                <TagWord word="собаки" tagStyleCorrect={containerCorrect} />
+                { wordsArray.map((word, index) => <TagWord key={index} word={word} tagStyleCorrect={containerCorrect} />) }
             </Box>
 
         </Box>
