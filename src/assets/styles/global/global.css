@@ -41,6 +41,12 @@
     background-color: var(--dark-green);
 }
 
+/* Transparent Background Colors */
+/* This one is created from --secondary: #669BBC;. Will not change to rgb for now. */
+.bg-secondary-transparent {
+    background-color: rgba(102, 153, 188, 0.20);
+}
+
 
 /* Text Colors */
 .text-primary {
