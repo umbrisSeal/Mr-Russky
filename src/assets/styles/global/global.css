@@ -15,6 +15,9 @@
     --accent: #FDF0D5;
     --accent2: #780000;
     --accent3: #C1121F;
+
+    --green: #29DA0D;
+    --dark-green: #128300;
 }
 
 
@@ -33,6 +36,9 @@
 }
 .bg-accent3 {
     background-color: var(--accent3);
+}
+.bg-dark-green {
+    background-color: var(--dark-green);
 }
 
 
@@ -56,4 +62,7 @@
 }
 .border-secondary {
     border-color: var(--secondary);
+}
+.border-green {
+    border-color: var(--green);
 }
