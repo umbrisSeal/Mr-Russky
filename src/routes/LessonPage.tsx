@@ -2,6 +2,7 @@
 
 import { Box } from "@mui/material";
 import PageMotionWrapper from "../components/layout/PageMotionWrapper";
+import AnswersContainer from "../components/answersContainer/answersContainer";
 
 function LessonPage() {
     return (
@@ -9,8 +10,8 @@ function LessonPage() {
             <Box className='bg-amber-950 flex [height:calc(100vh-60px)]'>
 
                 {/* Answer Container (Correct Words) */}
-                <Box className='bg-blue-900 p-2 flex-15 flex justify-center'>
-                    <p> Answer Container here. </p>
+                <Box className='bg-blue-900 p-1 flex-15 flex justify-center'>
+                    <AnswersContainer containerCorrect={true} />
                 </Box>
 
                 {/* Central Secction */}
@@ -19,8 +20,8 @@ function LessonPage() {
                 </Box>
 
                 {/* Answer Container (Incorrect Words) */}
-                <Box className='bg-blue-900 p-2 flex-15 flex justify-center'>
-                    <p> Answer Container here. </p>
+                <Box className='bg-blue-900 p-1 flex-15 flex justify-center'>
+                    <AnswersContainer containerCorrect={false} />
                 </Box>
 
             </Box>
@@ -29,10 +30,3 @@ function LessonPage() {
 }
 
 export default LessonPage;
-
-// AnwsersContainer Props
-/*
-    Correct/Incorrect:
-    Array of initial words:
-    function to add a word?
-*/
