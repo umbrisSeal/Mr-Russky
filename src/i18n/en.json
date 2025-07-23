@@ -17,6 +17,9 @@
                 "topWords": "Top 1,000 Words",
                 "vocabularyDB": "Vocabulary Database",
                 "swapLanguage": "Cambiar a Español"
+            },
+            "main": {
+                "return": "Go Back"
             }
         },
         "tags": {

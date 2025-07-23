@@ -17,6 +17,9 @@
                 "topWords": "Top 1,000 Palabras",
                 "vocabularyDB": "Cantidad de Vocabulario",
                 "swapLanguage": "Switch to English"
+            },
+            "main": {
+                "return": "Volver"
             }
         },
         "tags": {
