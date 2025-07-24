@@ -67,11 +67,17 @@
 .text-accent {
     color: var(--accent);
 }
+.text-accent2 {
+    color: var(--accent2);
+}
 .text-accent3 {
     color: var(--accent3);
 }
 .text-green {
     color: var(--green);
+}
+.text-dark-green {
+    color: var(--dark-green);
 }
 .text-custom-black {
     color: var(--black);
