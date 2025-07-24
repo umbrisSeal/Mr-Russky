@@ -3,11 +3,8 @@ import { useState } from "react";
 import { Box } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import TagWord from "../tags/TagWord";
+import type { AnswersContainerProps } from './answerContainerTypes.ts';
 
-type AnswersContainerProps = {
-    containerCorrect: boolean;      // True if it storages correct anwsers, false otherwise.
-    wordsArray: string[];           // String of initial words shown in this component.
-};
 
 function AnswersContainer({containerCorrect = false, wordsArray = []} : AnswersContainerProps ) {
     const [words, setWords] = useState([...wordsArray]);
