@@ -78,3 +78,11 @@
 .border-green {
     border-color: var(--green);
 }
+
+
+/* Special Border Effects */
+.border-top-only {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
