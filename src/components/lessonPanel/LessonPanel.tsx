@@ -27,9 +27,9 @@ function LessonPanel({wordType} : LessonPanelProps) {
 
             {/* Controls Container */}
             <Box className='border-secondary border-3 border-top-only flex justify-center items-center gap-8 py-4'>
-                <HintButton buttonMessage='Hint' />
+                <HintButton buttonMessage={t('components.buttons.lesson.hint')} />
                 <AnswerInput value={userAnswer} setValue={setUserAnswer} />
-                <OkButton buttonMessage='OK' />
+                <OkButton buttonMessage={t('components.buttons.lesson.ok')} />
             </Box>
 
         </Box>
