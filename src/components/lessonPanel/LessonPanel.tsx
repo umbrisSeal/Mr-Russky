@@ -2,6 +2,7 @@
 
 import { Box } from "@mui/material";
 import type { LessonPanelProps } from "./lessonPanelTypes";
+import AnswerInput from "../inputs/AnswerInput";
 
 function LessonPanel({wordType} : LessonPanelProps) {
     return (
@@ -19,8 +20,10 @@ function LessonPanel({wordType} : LessonPanelProps) {
             </Box>
 
             {/* Controls Container */}
-            <Box className='border-secondary border-3 border-top-only'>
-                <p> Controls Container </p>
+            <Box className='border-secondary border-3 border-top-only flex justify-center items-center gap-8 py-4'>
+                <p> Hint button </p>
+                <AnswerInput />
+                <p> OK Button </p>
             </Box>
 
         </Box>
