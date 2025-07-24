@@ -15,19 +15,7 @@ function LessonPanel({wordType} : LessonPanelProps) {
     const mockCorrectWord = 'едифисо';
     const mockUserAnswer = 'здание';
 
-
-    /*
-        <Box
-        className="bg-gray-600 max-w-[740px] w-full h-full"
-        sx={{
-            backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png')`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-        }}
-        />
-    */
-
+    // Issue a problem in this component. Using <Box> with image background is not a proper solution.
 
     return (
         <Box className='bg-secondary-transparent border-secondary border-3 h-full flex flex-col'>
@@ -40,12 +28,13 @@ function LessonPanel({wordType} : LessonPanelProps) {
             {/* Main Content Container */}
             <Box className='flex-1 border-secondary border-3 border-top-only flex flex-col'>
                 {/* Image Container */}
-                <Box className='bg-pink-700 flex-1 px-10 py-4 flex justify-center'>
+                {/* MAKE AN ISSUE FOR THIS PART! */}
+                <Box className='bg-pink-700 px-10 py-4 flex justify-center h-full'>
                     <Box
-                        className='bg-gray-600 max-w-[740px] w-full h-full'
+                        className='bg-gray-600 w-full max-w-[740px] [height:calc(50vh-60px)] flex justify-center items-center'
                     >
                         <img
-                            className="w-full h-full object-fill"
+                            className="h-full w-auto object-fill"
                             alt="Imagen de Wikipedia Commons"
                             src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
                         />
