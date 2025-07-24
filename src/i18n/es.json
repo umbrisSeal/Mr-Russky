@@ -22,6 +22,9 @@
                 "return": "Volver"
             }
         },
+        "inputs": {
+            "answerPlaceholder": "Respuesta..."
+        },
         "tags": {
             "tagGroupPrefix": "Grupo",
             "tagTotalPrefix": "Total"

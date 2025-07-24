@@ -1,12 +1,13 @@
-import React, { useTransition } from 'react'
+import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 function AnswerInput() {
-    const { t } = useTransition();
+    const { t } = useTranslation();
 
     return (
         <input
             type='text'
-            placeholder='Your answer...' // Must be a translation message.
+            placeholder={t('components.inputs.answerPlaceholder')}
             className='
                 bg-gray
                 text-custom-black
