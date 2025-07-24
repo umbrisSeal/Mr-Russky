@@ -6,6 +6,7 @@ import AnswerInput from "../inputs/AnswerInput";
 import HintButton from '../buttons/HintButton';
 import { useTranslation } from 'react-i18next';
 import OkButton from '../buttons/OkButton';
+import AnswerStatusContainer from '../answerStatusContainer/AnswerStatusContainer';
 
 function LessonPanel({wordType} : LessonPanelProps) {
     const { t } = useTranslation();
@@ -22,7 +23,10 @@ function LessonPanel({wordType} : LessonPanelProps) {
 
             {/* Main Content Container */}
             <Box className='flex-1 border-secondary border-3 border-top-only'>
-                <p> Main Content Container </p>
+                <Box>
+                    <p> Image Container, this must be the image container and image. Probably another component called ImagePresentator. </p>
+                </Box>
+                <AnswerStatusContainer />
             </Box>
 
             {/* Controls Container */}
