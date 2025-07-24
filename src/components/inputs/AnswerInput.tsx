@@ -1,13 +1,16 @@
-import React from 'react'
+//import React from 'react'
 import { useTranslation } from 'react-i18next';
+import type { InputProps } from './inputTypes';
 
-function AnswerInput() {
+function AnswerInput({value, setValue} : InputProps) {
     const { t } = useTranslation();
 
     return (
         <input
             type='text'
             placeholder={t('components.inputs.answerPlaceholder')}
+            value={value}
+            onChange={(event) => setValue(event.target.value)}
             className='
                 bg-gray
                 text-custom-black
