@@ -16,6 +16,19 @@ function LessonPanel({wordType} : LessonPanelProps) {
     const mockUserAnswer = 'здание';
 
 
+    /*
+        <Box
+        className="bg-gray-600 max-w-[740px] w-full h-full"
+        sx={{
+            backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+        }}
+        />
+    */
+
+
     return (
         <Box className='bg-secondary-transparent border-secondary border-3 h-full flex flex-col'>
 
@@ -25,10 +38,20 @@ function LessonPanel({wordType} : LessonPanelProps) {
             </Box>
 
             {/* Main Content Container */}
-            <Box className='flex-1 border-secondary border-3 border-top-only'>
-                <Box>
-                    <p> Image Container, this must be the image container and image. Probably another component called ImagePresentator. </p>
+            <Box className='flex-1 border-secondary border-3 border-top-only flex flex-col'>
+                {/* Image Container */}
+                <Box className='bg-pink-700 flex-1 px-10 py-4 flex justify-center'>
+                    <Box
+                        className='bg-gray-600 max-w-[740px] w-full h-full'
+                    >
+                        <img
+                            className="w-full h-full object-fill"
+                            alt="Imagen de Wikipedia Commons"
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+                        />
+                    </Box>
                 </Box>
+                {/* Answer Container */}
                 <AnswerStatusContainer correctAnswer={mockCorrectWord} userAnswer={mockUserAnswer} />
             </Box>
 
