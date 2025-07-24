@@ -18,6 +18,8 @@
 
     --green: #29DA0D;
     --dark-green: #128300;
+    --gray: #D9D9D9;
+    --black: #1E1E1E;
 }
 
 
@@ -39,6 +41,9 @@
 }
 .bg-dark-green {
     background-color: var(--dark-green);
+}
+.bg-gray {
+    background-color: var(--gray);
 }
 
 /* Transparent Background Colors */
@@ -63,6 +68,9 @@
 }
 .text-green {
     color: var(--green);
+}
+.text-custom-black {
+    color: var(--black);
 }
 
 /* Border Colors */
