@@ -1,10 +1,13 @@
-// import React from 'react'
+import { useState } from 'react'
 
 import { Box } from "@mui/material";
 import type { LessonPanelProps } from "./lessonPanelTypes";
 import AnswerInput from "../inputs/AnswerInput";
 
 function LessonPanel({wordType} : LessonPanelProps) {
+    const [userAnswer, setUserAnswer] = useState('');
+
+
     return (
         <Box className='bg-secondary-transparent border-secondary border-3 h-full flex flex-col'>
 
@@ -22,7 +25,7 @@ function LessonPanel({wordType} : LessonPanelProps) {
             {/* Controls Container */}
             <Box className='border-secondary border-3 border-top-only flex justify-center items-center gap-8 py-4'>
                 <p> Hint button </p>
-                <AnswerInput />
+                <AnswerInput value={userAnswer} setValue={setUserAnswer} />
                 <p> OK Button </p>
             </Box>
 
