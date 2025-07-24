@@ -20,6 +20,10 @@
             },
             "main": {
                 "return": "Go Back"
+            },
+            "lesson": {
+                "hint": "Hint",
+                "ok": "OK"
             }
         },
         "inputs": {

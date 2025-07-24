@@ -20,6 +20,10 @@
             },
             "main": {
                 "return": "Volver"
+            },
+            "lesson": {
+                "hint": "Pista",
+                "ok": "OK"
             }
         },
         "inputs": {
