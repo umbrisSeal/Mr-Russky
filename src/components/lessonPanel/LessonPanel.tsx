@@ -1,18 +1,20 @@
 // import React from 'react'
 
 import { Box } from "@mui/material";
+import type { LessonPanelProps } from "./lessonPanelTypes";
 
-function LessonPanel() {
+function LessonPanel({wordType} : LessonPanelProps) {
     return (
-        <Box className='bg-secondary-transparent border-secondary border-3'>
+        <Box className='bg-secondary-transparent border-secondary border-3 h-full flex flex-col'>
 
             {/* Word Type Title Container */}
-            <Box className=''>
-                <p> Word Type Container </p>
+            {/* h-[35px] */}
+            <Box className='p-1'>
+                <p className="capitalize font-bold text-2xl text-center text-accent"> {wordType} </p>
             </Box>
 
             {/* Main Content Container */}
-            <Box className='border-secondary border-3 border-top-only'>
+            <Box className='flex-1 border-secondary border-3 border-top-only'>
                 <p> Main Content Container </p>
             </Box>
 
