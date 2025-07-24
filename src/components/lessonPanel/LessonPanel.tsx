@@ -12,6 +12,9 @@ function LessonPanel({wordType} : LessonPanelProps) {
     const { t } = useTranslation();
     const [userAnswer, setUserAnswer] = useState('');
 
+    const mockCorrectWord = 'едифисо';
+    const mockUserAnswer = 'здание';
+
 
     return (
         <Box className='bg-secondary-transparent border-secondary border-3 h-full flex flex-col'>
@@ -26,7 +29,7 @@ function LessonPanel({wordType} : LessonPanelProps) {
                 <Box>
                     <p> Image Container, this must be the image container and image. Probably another component called ImagePresentator. </p>
                 </Box>
-                <AnswerStatusContainer />
+                <AnswerStatusContainer correctAnswer={mockCorrectWord} userAnswer={mockUserAnswer} />
             </Box>
 
             {/* Controls Container */}
