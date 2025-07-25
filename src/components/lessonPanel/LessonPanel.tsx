@@ -14,6 +14,8 @@ import AnswerStatusContainer from '../answerStatusContainer/AnswerStatusContaine
         - Add an origin from the image (Wikipedia Commons or other)
         - Attribution, required to be presented when we show the image to the user.
         - Category array, for future development in categories. ['animals', 'fruits', 'food', ] etc.
+        - Group value, for A, B or C.
+        - Do not add a top value, we will do custom lists for that.
 */
 
 function LessonPanel({wordType} : LessonPanelProps) {
