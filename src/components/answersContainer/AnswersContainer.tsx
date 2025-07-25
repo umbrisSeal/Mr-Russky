@@ -10,6 +10,8 @@ function AnswersContainer({containerCorrect = false, wordsArray = []} : AnswersC
     const [words, setWords] = useState([...wordsArray]);
     const { t } = useTranslation();
 
+    console.log(setWords); // Only to bypass typescript error for build.
+
     // Add a function in the future or a prop function to allow add new words with setWords.
 
     return (
