@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import type { AnswerStatusContainerProps } from './answerStatusContainerTypes';
 
 function AnswerStatusContainer({userAnswer, correctAnswer} : AnswerStatusContainerProps) {
-    
+
     type LetterFeedback = {
         character: string;
         isCorrect: boolean;
@@ -34,7 +34,7 @@ function AnswerStatusContainer({userAnswer, correctAnswer} : AnswerStatusContain
                         className={`
                             text-4xl
                             ${userAnswerCorrect ? 'text-green' : 'text-accent3'}
-                            ${evaluatedCharacter.isCorrect ? 'font-extralight' : 'font-extrabold'}
+                            ${evaluatedCharacter.isCorrect && !userAnswerCorrect ? 'font-extralight' : 'font-extrabold'}
                             ${index == 0 ? 'capitalize' : ''}
                         `}
                         style={{ display: 'inline', marginRight: 2 }}   // To prevent new lines and sepatate characters horizontally.
