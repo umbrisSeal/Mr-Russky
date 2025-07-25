@@ -28,7 +28,7 @@ function LessonPanel({wordType} : LessonPanelProps) {
         { id: "вода1", translation: "agua2", urlWiki: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Bonfire_in_Kladow_17.04.2011_20-41-54.JPG" },
         { id: "вода2", translation: "agua3", urlWiki: "https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6643a82fc46ca462b5efa2f9_56-Las-X-casas-mas-iconicas-de-la-CDMX-que-puedes-visitar-en-estas-vacaciones-de-semana-santa.webp" },
         { id: "вода3", translation: "agua4", urlWiki: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Labrador_Retriever_%281210559%29.jpg/960px-Labrador_Retriever_%281210559%29.jpg" },
-        { id: "вода4", translation: "agua5", urlWiki: "https://www.recetasnestle.com.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg" }
+        { id: "вода4", translation: "agua5", urlWiki: "https://www.recetasnestle.co.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg" }
     ];
 
     const currentExcercice = mockLessonWords[currentExcerciceIndex];
@@ -74,7 +74,7 @@ function LessonPanel({wordType} : LessonPanelProps) {
                     >
                         <img
                             className="h-full w-auto object-fill"
-                            alt={`Imagen de: ${currentExcercice.translation}`} // Add translation here if image does not load.
+                            alt={`${t('pages.lesson.imageNotShown')}: ${currentExcercice.translation}`} // Add translation here if image does not load.
                             src={currentExcercice.urlWiki}
                         />
                     </Box>
