@@ -6,6 +6,9 @@
         },
         "wordDatabasePage": {
             "title": "Vocabulary count by Category and Group."
+        },
+        "lesson": {
+            "imageNotShown": "Image showing"
         }
     },
     "components": {

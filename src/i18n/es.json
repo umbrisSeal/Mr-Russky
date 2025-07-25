@@ -6,6 +6,9 @@
         },
         "wordDatabasePage": {
             "title": "Cantidad de Vocabulario por Categoria y Grupo"
+        },
+        "lesson": {
+            "imageNotShown": "Imagen de"
         }
     },
     "components": {
