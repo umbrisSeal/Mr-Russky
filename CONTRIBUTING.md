@@ -1,8 +1,8 @@
 # 🤝 Contributing to Mr. Russky
 
-<!-- Change all hard-coded emojies to regular .md codes like :emoji: in the future. -->
-<!-- Add an specification to make all commit messages (and code) in english to allow other users to understand it easily -->
-<!-- Add a warning or indication to use explicit names and vocabulary. Like: PR (Wrong), Pull Request (Correct). Even if this seems obvious for some people. -->
+<!-- Consider replacing hard-coded emojis with Markdown :emoji: syntax in the future. -->
+<!-- Commit messages and code should be in English for consistency. -->
+<!-- Use explicit terminology: e.g., "Pull Request" instead of "PR" in documentation. -->
 
 Thank you for considering contributing to **Mr. Russky**! 🎉  
 This is a community-driven educational project to help users learn Russian vocabulary in an accessible, respectful, and open-source way.
@@ -13,24 +13,24 @@ Please take a moment to review this guide before making changes.
 
 ## 📌 Project Status
 
-🔧 **Important Note:** The application is still in an early-to-mid development phase.  
-While we truly appreciate your interest, **we’re currently focused on defining the core structure, UI design, and data format**.
+🟢 **Vocabulary contributions are now open!**  
+While the application is still under development, we’ve finalized a working data format and structure for adding new Russian words.
 
-🕒 For this reason, **contributions involving new Russian vocabulary entries are temporarily on hold** until we establish a stable base.
+We’re actively looking for help expanding the database of **nouns** (`сущ.`), including their grammatical data, plural forms, and translations.
 
 <br>
 
 
 ## ✅ What Kind of Contributions Are Welcome Right Now?
 
-- Reporting typos or translation mistakes in the interface.
-- Proposing UI/UX or accessibility improvements.
-- Fixing technical issues or refactoring code.
-- Reporting bugs or functionality problems.
-- Improving documentation (README.md, CONTRIBUTING.md, etc.).
-- Suggestions regarding architecture or project organization.
-- Adding unit/integration tests for React components.
-- Proposing better file/data structures.
+- Adding new Russian **nouns** with the following format (see below).
+- Expanding underrepresented **categories** of vocabulary.
+- Reporting typos or translation mistakes.
+- Suggesting improvements to UI/UX or accessibility.
+- Refactoring code and improving structure.
+- Reporting bugs or feature issues.
+- Improving documentation (README.md, CONTRIBUTING.md).
+- Adding tests or utilities related to vocabulary logic.
 
 <br>
 
@@ -44,6 +44,109 @@ Before submitting a pull request:
 3. If you're unsure whether your idea or change is appropriate, feel free to open a **discussion or issue** first.
 
 <br>
+
+
+## 🧠 Vocabulary Entry Format
+
+When contributing new **nouns**, please follow this sample structure precisely.  
+All fields, except the ones on **image** and **group** must be lowercase.
+Fields outside the ones listed below **must not be removed or altered**.
+
+```ts
+{
+    id: "рука",                 // Base nominative russian word.
+    gender: "female",           // Gender of the word. Must be: "male", "female" or "neutral".
+    translation: {
+        es: "mano/brazo",       // Translation in spanish.
+        en: "hand/arm"          // Translation in english.
+    },
+    cases: {
+    singular: {
+        nominative: "рука",     // Singular nominative form.
+        genitive: "",           // Reserved for later.
+        dative: "",             // Reserved for later.
+        accusative: "",         // Reserved for later.
+        instrumental: "",       // Reserved for later.
+        prepositional: ""       // Reserved for later.
+    },
+    plural: {
+        nominative: "руки",     // Plural nominative form.
+        genitive: "",           // Reserved for later.
+        dative: "",             // Reserved for later.
+        accusative: "",         // Reserved for later.
+        instrumental: "",       // Reserved for later.
+        prepositional: ""       // Reserved for later.
+    }
+    },
+    image: {
+        imageUrl: "",           // Optional: Link to an image from Wikipedia Commons of the nominative form of the word.
+        imageAttributon: "",    // Optional: If Wikipedia asks for author's attribution, copy paste their required text here.
+        imageSource: ""         // Optional: If added an imageUrl then just add "Wikipedia Commons", if not left in "".
+    },
+    difficulty: 1,              // Reserved for later, leave it as 1.
+    group: "A",                 // Reserved for later, leave it as "A".
+    categories: [],             // Reserved for later.
+    notes: "",                  // Optional: If you would like to add special indications about this particular word.
+    example: {
+        ru: "",                 // Reserved for later.
+        es: "",                 // Reserved for later.
+        en: ""                  // Reserved for later.
+    },
+    verified: false,            // Reserved for later, leave it in false.
+    completed: false            // Reserved for later, leave it in false.
+}
+```
+
+⚠️ For now, only the following fields are required:
+
+- id: Russian noun in nominative singular form.
+- cases.singular.nominative: Nominative singular form.
+- cases.plural.nominative: Nominative plural form.
+- gender: One of "male", "female", or "neutral".
+- translation.es and/or translation.en. for translation in spanish/english.
+
+The rest must remain present but can be left empty or filled as needed later.
+
+Also, please register new nouns in alphabetical order according to its id.
+
+
+
+## 📂 File and Folder Structure
+
+Words are organized by:
+
+src/
+└── data/
+    └── words/
+        ├── inflected/
+        │   └── nouns/
+        │       ├── family.ts
+        │       ├── home.ts
+        │       ├── school.ts
+        │       └── ... more categories will be added in the future.
+        └── invariable/
+
+Each file represents a thematic category.
+
+You must place the new word in its proper file depending on the theme.
+
+If you're unsure where to put something, open an Issue or Discussion first.
+
+<br>
+
+
+## 📋 Current Priority Categories
+
+We will follow a proven logical-pedagogical category scheme, so the order of priority for noun categories will be published as they are added to the project.
+
+We kindly ask you to prioritize vocabulary for the following themes first:
+
+1. 👨‍🏫 School
+2. 👪 Family
+3. 🏠 Home
+
+<br>
+
 
 ## 🛠️ Quick Start Guide
 
@@ -78,25 +181,16 @@ git commit -m "Add a short description of changes." -e
 
 <br>
 
-## 📂 Project Structure (Coming Soon)
 
-A full explanation of the folder structure, data format, and multilingual logic will be provided soon to help contributors better understand the architecture.
+## 📣 Tips for a Good Vocabulary Contribution
 
-<br>
-
-## 📚 Contributing Vocabulary (⚠️ On Hold)
-
-A dedicated guide will soon be published with information on:
-
-- How to add new words and categories.
-- Required JSON format and validation rules.
-- Guidelines for Russian spelling and accent handling.
-- Image sourcing requirements for vocabulary entries.
-- Naming conventions and category structures.
-
-🔒 Until then, please refrain from submitting vocabulary changes.
+- Use accurate and standard forms (check Wiktionary or academic sources).
+- Include as much detail as possible where applicable.
+- Always double-check spelling and diacritics.
+- Use // comments in the .ts file if clarification is needed.
 
 <br>
+
 
 ## ❤️ Code of Conduct
 
