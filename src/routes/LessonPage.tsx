@@ -43,6 +43,7 @@ function LessonPage() {
 
         } else {
             // Continue with next exercice.
+            setShowingAnswer(!showingAnswer);
             setCurrentExcerciceIndex((prev) => Math.min(prev + 1, mockLessonVocabulary.length - 1));
             // Must handle finish lesson when there are no more exercices.
         }
