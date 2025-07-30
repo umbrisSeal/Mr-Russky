@@ -8,16 +8,6 @@ import { useTranslation } from 'react-i18next';
 import OkButton from '../buttons/OkButton';
 import AnswerStatusContainer from '../answerStatusContainer/AnswerStatusContainer';
 
-/*
-    WE NEED TO RESTRUCTURE THE WORD DATABASE TO ITS FINAL FORM BEFORE WE CAN CONTINUE.
-    Some considerations:
-        - Add an origin from the image (Wikipedia Commons or other)
-        - Attribution, required to be presented when we show the image to the user.
-        - Category array, for future development in categories. ['animals', 'fruits', 'food', ] etc.
-        - Group value, for A, B or C.
-        - Do not add a top value, we will do custom lists for that.
-*/
-
 function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showingAnswer, okButtonFn} : LessonPanelProps) {
     const { t, i18n } = useTranslation();
     const [userAnswer, setUserAnswer] = useState<string>('');
