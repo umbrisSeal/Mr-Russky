@@ -18,11 +18,9 @@ import AnswerStatusContainer from '../answerStatusContainer/AnswerStatusContaine
         - Do not add a top value, we will do custom lists for that.
 */
 
-function LessonPanel({wordType} : LessonPanelProps) {
+function LessonPanel({wordType, currentExcerciceIndex, showingAnswer, okButtonFn} : LessonPanelProps) {
     const { t } = useTranslation();
     const [userAnswer, setUserAnswer] = useState('');
-    // Maybe move this index to outside so Parent has the control of index (adding words to lateral panels): Recieve the proparty and set function instead.
-    const [currentExcerciceIndex, setCurrentExcerciceIndex] = useState(0);
 
     // Do not add typing to this element because its just a mock. We must recieve as prop the real data in the future.
     const mockLessonWords = [
@@ -49,10 +47,8 @@ function LessonPanel({wordType} : LessonPanelProps) {
     }, [nextURLsArray]);
 
     function handleOkButton() {
-        // Probably also move this function outside in LessonPage to storage the word in the correct group (incorrect or correct).
-        // Do future validations and logic here.
-        setUserAnswer('');
-        setCurrentExcerciceIndex((prev) => Math.min(prev + 1, mockLessonWords.length - 1)); // Handle finish lesson here.
+        if(showingAnswer) setUserAnswer(''); // Next exercice, clear input.
+        okButtonFn(userAnswer);   // Let parent component continue the lesson.
     };
 
 
