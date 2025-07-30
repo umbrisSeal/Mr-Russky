@@ -2,7 +2,7 @@
 import { Box } from '@mui/material';
 import type { AnswerStatusContainerProps } from './answerStatusContainerTypes';
 
-function AnswerStatusContainer({userAnswer, correctAnswer} : AnswerStatusContainerProps) {
+function AnswerStatusContainer({userAnswer, correctAnswer, showResult} : AnswerStatusContainerProps) {
 
     type LetterFeedback = {
         character: string;
@@ -23,7 +23,7 @@ function AnswerStatusContainer({userAnswer, correctAnswer} : AnswerStatusContain
     const userAnswerCorrect = evaluatedResponse.every((letter) => letter.isCorrect);
 
     return (
-        <Box className='text-center'>
+        <Box className='text-center' style={{ visibility: showResult ? 'visible' : 'hidden' }}>
             <p className='capitalize text-xs italic'> cansado </p>
 
             {/* Correct Word generation: */}
