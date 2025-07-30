@@ -78,7 +78,7 @@ function LessonPanel({wordType, currentExcerciceIndex, showingAnswer, okButtonFn
                     </Box>
                 </Box>
                 {/* Answer Container */}
-                <AnswerStatusContainer correctAnswer={currentExcercice.id} userAnswer={userAnswer} />
+                <AnswerStatusContainer correctAnswer={currentExcercice.id} userAnswer={userAnswer} showResult={showingAnswer} />
             </Box>
 
             {/* Controls Container */}
