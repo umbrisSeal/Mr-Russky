@@ -1,8 +1,10 @@
 //import React from 'react'
 import { Box } from '@mui/material';
 import type { AnswerStatusContainerProps } from './answerStatusContainerTypes';
+import { useTranslation } from 'react-i18next';
 
-function AnswerStatusContainer({userAnswer, correctAnswer, showResult} : AnswerStatusContainerProps) {
+function AnswerStatusContainer({userAnswer, correctAnswer, showResult, translations} : AnswerStatusContainerProps) {
+    const { i18n } = useTranslation();
 
     type LetterFeedback = {
         character: string;
@@ -24,7 +26,7 @@ function AnswerStatusContainer({userAnswer, correctAnswer, showResult} : AnswerS
 
     return (
         <Box className='text-center' style={{ visibility: showResult ? 'visible' : 'hidden' }}>
-            <p className='capitalize text-xs italic'> cansado </p>
+            <p className='capitalize text-xs italic'> {i18n.language === 'es' ? translations.es : translations.en} </p>
 
             {/* Correct Word generation: */}
             {

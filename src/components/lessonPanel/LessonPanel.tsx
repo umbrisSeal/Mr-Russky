@@ -18,7 +18,7 @@ import AnswerStatusContainer from '../answerStatusContainer/AnswerStatusContaine
         - Do not add a top value, we will do custom lists for that.
 */
 
-function LessonPanel({wordType, currentExcerciceIndex, showingAnswer, okButtonFn} : LessonPanelProps) {
+function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showingAnswer, okButtonFn} : LessonPanelProps) {
     const { t } = useTranslation();
     const [userAnswer, setUserAnswer] = useState('');
 
@@ -31,11 +31,11 @@ function LessonPanel({wordType, currentExcerciceIndex, showingAnswer, okButtonFn
         { id: "вода4", translation: "agua5", urlWiki: "https://www.recetasnestle.co.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg" }
     ];
 
-    const currentExcercice = mockLessonWords[currentExcerciceIndex];
+    const currentExcercice = lessonVocabulary[currentExcerciceIndex];
 
-    const nextURLsArray = mockLessonWords
+    const nextURLsArray = lessonVocabulary
         .slice(currentExcerciceIndex+1, currentExcerciceIndex+4)    // Get the next 3 urls
-        .map((exercice) => exercice.urlWiki)
+        .map((word) => word.image.imageUrl)
     ;
 
     // Pre-Load next images. (Storage in browser's cache).
@@ -49,6 +49,11 @@ function LessonPanel({wordType, currentExcerciceIndex, showingAnswer, okButtonFn
     function handleOkButton() {
         if(showingAnswer) setUserAnswer(''); // Next exercice, clear input.
         okButtonFn(userAnswer);   // Let parent component continue the lesson.
+    };
+
+    const translations = {
+        es: currentExcercice.translation.es,
+        en: currentExcercice.translation.en
     };
 
 
@@ -72,13 +77,13 @@ function LessonPanel({wordType, currentExcerciceIndex, showingAnswer, okButtonFn
                     >
                         <img
                             className="h-full w-auto object-fill"
-                            alt={`${t('pages.lesson.imageNotShown')}: ${currentExcercice.translation}`} // Add translation here if image does not load.
-                            src={currentExcercice.urlWiki}
+                            alt={`${t('pages.lesson.imageNotShown')}: ${currentExcercice.translation.es}`} // Add translation here if image does not load.
+                            src={currentExcercice.image.imageUrl}
                         />
                     </Box>
                 </Box>
                 {/* Answer Container */}
-                <AnswerStatusContainer correctAnswer={currentExcercice.id} userAnswer={userAnswer} showResult={showingAnswer} />
+                <AnswerStatusContainer correctAnswer={currentExcercice.id} userAnswer={userAnswer} showResult={showingAnswer} translations={translations} />
             </Box>
 
             {/* Controls Container */}
