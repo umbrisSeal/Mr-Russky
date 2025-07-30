@@ -14,7 +14,7 @@ function AnswersContainer({containerCorrect = false, wordsArray = []} : AnswersC
             {/* Answer Counter */}
             <Box className={`font-semibold text-center text-3xl ${containerCorrect ? 'text-green' : 'text-accent3'}`}>
                 <p> {containerCorrect ? t('components.answersContainer.correct') : t('components.answersContainer.incorrect')}: </p>
-                <p> 7 </p>
+                <p> {wordsArray.length} </p>
             </Box>
 
             {/* List of Answers */}
