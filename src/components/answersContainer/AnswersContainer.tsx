@@ -1,5 +1,4 @@
 //import React from 'react'
-import { useState } from "react";
 import { Box } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import TagWord from "../tags/TagWord";
@@ -7,12 +6,7 @@ import type { AnswersContainerProps } from './answerContainerTypes.ts';
 
 
 function AnswersContainer({containerCorrect = false, wordsArray = []} : AnswersContainerProps ) {
-    const [words, setWords] = useState([...wordsArray]);
     const { t } = useTranslation();
-
-    console.log(setWords); // Only to bypass typescript error for build.
-
-    // Add a function in the future or a prop function to allow add new words with setWords.
 
     return (
         <Box className='w-full h-[85%] p-1 rounded-xl border-secondary border-4 flex flex-col gap-1 bg-secondary-transparent'>
@@ -25,7 +19,7 @@ function AnswersContainer({containerCorrect = false, wordsArray = []} : AnswersC
 
             {/* List of Answers */}
             <Box className='flex-1 flex flex-wrap content-start gap-1 overflow-auto'>
-                { words.map((word, index) => <TagWord key={index} word={word} tagStyleCorrect={containerCorrect} />) }
+                { wordsArray.map((word, index) => <TagWord key={index} word={word} tagStyleCorrect={containerCorrect} />) }
             </Box>
 
         </Box>
