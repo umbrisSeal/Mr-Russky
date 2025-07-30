@@ -19,17 +19,8 @@ import AnswerStatusContainer from '../answerStatusContainer/AnswerStatusContaine
 */
 
 function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showingAnswer, okButtonFn} : LessonPanelProps) {
-    const { t } = useTranslation();
-    const [userAnswer, setUserAnswer] = useState('');
-
-    // Do not add typing to this element because its just a mock. We must recieve as prop the real data in the future.
-    const mockLessonWords = [
-        { id: "вода", translation: "agua", urlWiki: "https://believe.earth/wp-content/uploads/2018/10/economia-agua-pixabay-believe-earth-1024x683.jpg" },
-        { id: "вода1", translation: "agua2", urlWiki: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Bonfire_in_Kladow_17.04.2011_20-41-54.JPG" },
-        { id: "вода2", translation: "agua3", urlWiki: "https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6643a82fc46ca462b5efa2f9_56-Las-X-casas-mas-iconicas-de-la-CDMX-que-puedes-visitar-en-estas-vacaciones-de-semana-santa.webp" },
-        { id: "вода3", translation: "agua4", urlWiki: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Labrador_Retriever_%281210559%29.jpg/960px-Labrador_Retriever_%281210559%29.jpg" },
-        { id: "вода4", translation: "agua5", urlWiki: "https://www.recetasnestle.co.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg" }
-    ];
+    const { t, i18n } = useTranslation();
+    const [userAnswer, setUserAnswer] = useState<string>('');
 
     const currentExcercice = lessonVocabulary[currentExcerciceIndex];
 
@@ -77,7 +68,7 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
                     >
                         <img
                             className="h-full w-auto object-fill"
-                            alt={`${t('pages.lesson.imageNotShown')}: ${currentExcercice.translation.es}`} // Add translation here if image does not load.
+                            alt={`${t('pages.lesson.imageNotShown')}: ${i18n.language === 'es' ? translations.es : translations.en}`}
                             src={currentExcercice.image.imageUrl}
                         />
                     </Box>
