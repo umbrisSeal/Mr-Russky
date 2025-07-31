@@ -10,7 +10,7 @@ function VirtualKeyboard() {
     ];
 
     return (
-        <Box className='inline-block'>
+        <Box className='inline-block bg-secondary-transparent p-1 rounded-xl border-1 border-secondary'>
             {
                 keyRows.map((keyRow, indexRow) => {
                     return <Box key={indexRow} className='mb-0.5 flex justify-center gap-1'>
