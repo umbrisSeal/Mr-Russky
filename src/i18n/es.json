@@ -16,7 +16,32 @@
             "incorrectWords": "Palabras Incorrectas",
             "correctedWords": "Palabras Corregidas",
             "totalWords": "Palabras Totales",
-            "vocabularyMastery": "Dominio de Vocabulario"
+            "vocabularyMastery": "Dominio de Vocabulario",
+            "finalMessage": {
+                "message1": "Cada error es una pista sobre lo que se necesita reforzar. ¡Todo se empieza por algo!",
+                "message2": "Un pequeño paso es un gran avance. ¡Sigue asi!",
+                "message3": "¡Ya hay progreso! Tu aprendizaje esta en marcha, ahora ¡No te detengas!",
+                "message4": "Ya se nota el esfuerzo. El reconocimiento empieza a activarse.",
+                "message5": "Vas tomando ritmo de esto. Cada intento te lleva mas cerca del dominio.",
+                "message6": "Hay señales de avance. Tu memoria esta despertando.",
+                "message7": "¡Buen esfuerzo! Tu mente ya esta empezando a conectar las palabras.",
+                "message8": "¡Ya se nota tu estudio! El progreso es visible. El idioma se va haciendo familiar, ¿verdad?",
+                "message9": "Casi la mitad del camino. Estas muy cerca de un desempeño solido.",
+                "message10": "¡Mitad del camino! Un balance perfecto entre lo aprendido y lo pendiente.",
+                "message11": "Has superado la mitad del vocabulario. ¡Ya estas por encima del promedio!",
+                "message12": "¡Se nota que has estudiado! Tu nivel es muy bueno, ¡sigue asi!",
+                "message13": "Gran progreso, te acercas al dominio total.",
+                "message14": "¡Muy buen trabajo! Pocas fallas, gran retencion.",
+                "message15": "¡Excelente nivel! Unos pocos repasos mas y estaras en el dominio completo.",
+                "message16": "Muy cerca de la perfeccion. ¿Te animas a repetirla y llegar al 100%?",
+                "message17": "¡Casi perfecto! Solo unos detalles menores que pulir.",
+                "message18": "¡Que nivel! Tu conocimiento del ruso es muy solido.",
+                "message19": "¡A un paso de la perfeccion! Muy pocos errores, es ¡increible!",
+                "message20": "¡PERFECTO! ¡Felicidades, tu desempeño fue implecable! Has dominado esta leccion.",
+                "secret": "Madre mia willy pero que haces aqui compañero."
+            },
+            "customMessage": {
+            }
         }
     },
     "components": {

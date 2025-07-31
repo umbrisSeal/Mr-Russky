@@ -16,7 +16,32 @@
             "incorrectWords": "Incorrect Words",
             "correctedWords": "Fixed Words",
             "totalWords": "Total Words",
-            "vocabularyMastery": "Vocabulary Mastery"
+            "vocabularyMastery": "Vocabulary Mastery",
+            "finalMessage": {
+                "message1": "Every mistake is a clue about what needs reinforcement. Everything starts somewhere!",
+                "message2": "A small step is a giant leap. Keep going!",
+                "message3": "Progress is already being made! Your learning is underway, now! Don't stop!",
+                "message4": "The effort is already noticeable. Recognition is starting to kick in.",
+                "message5": "You're getting into the swing of things. Each attempt brings you closer to mastery.",
+                "message6": "There are signs of progress. Your memory is awakening.",
+                "message7": "Good effort! Your mind is already starting to connect the words.",
+                "message8": "Your studying is already showing! The progress is visible. The language is becoming familiar, isn't it?",
+                "message9": "Almost halfway there. You're very close to a solid performance.",
+                "message10": "Halfway there! A perfect balance between learned and what's pending.",
+                "message11": "You've passed half the vocabulary. You're already above average!",
+                "message12": "It's clear you've studied! Your level is very good, keep it up!",
+                "message13": "Great progress, you're getting close to total mastery.",
+                "message14": "Very good work! Few mistakes, great retention.",
+                "message15": "Excellent level! A few more reviews and you'll be completely proficient.",
+                "message16": "Very close to perfection. Do you dare to repeat it and get 100%?",
+                "message17": "Almost perfect! Just a few minor details to polish.",
+                "message18": "What a level! Your knowledge of Russian is very solid.",
+                "message19": "One step away from perfection! Very few mistakes, it's incredible!",
+                "message20": "PERFECT! Congratulations, your performance was impeccable! You have mastered this lesson.",
+                "secret": "Madre mia willy pero que haces aqui compañero."
+            },
+            "customMessage": {
+            }
         }
     },
     "components": {
