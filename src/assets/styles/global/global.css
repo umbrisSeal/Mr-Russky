@@ -90,6 +90,9 @@
 .border-secondary {
     border-color: var(--secondary);
 }
+.border-accent2 {
+    border-color: var(--accent2);
+}
 .border-accent3 {
     border-color: var(--accent3);
 }
