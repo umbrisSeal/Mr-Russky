@@ -1,4 +1,5 @@
 //import React from 'react'
+import { useTranslation } from 'react-i18next';
 import PrimaryOptionButton from '../components/buttons/PrimaryOptionButton';
 import SecondaryOptionButton from '../components/buttons/SecondaryOptionButton';
 import TertiaryOptionButton from '../components/buttons/TertiaryOptionButton';
@@ -6,10 +7,12 @@ import PageMotionWrapper from '../components/layout/PageMotionWrapper';
 import { Box } from '@mui/material';
 
 function ResultsPage() {
+    const { t } = useTranslation();
+
     return(
         <PageMotionWrapper>
             <Box className='flex flex-col items-center py-4 gap-4'>
-                <p className='text-4xl text-accent font-bold'> Resultados de la leccion: </p>
+                <p className='text-4xl text-accent font-bold'> {t('pages.results.title')}: </p>
 
                 <Box className='w-[70%] flex flex-col items-center gap-6'>
                     {/* Results Container */}
@@ -22,15 +25,15 @@ function ResultsPage() {
                     >
                         <Box className='text-green'>
                             <p className='font-bold text-5xl'> 58 </p>
-                            <p className='text-xl'> Palabras Correctas </p>
+                            <p className='text-xl'> {t('pages.results.correctWords')} </p>
                         </Box>
                         <Box className='text-accent3'>
                             <p className='font-bold text-5xl'> 12 </p>
-                            <p className='text-xl'> Palabras Incorrectas </p>
+                            <p className='text-xl'> {t('pages.results.incorrectWords')} </p>
                         </Box>
                         <Box className='text-secondary'>
                             <p className='font-bold text-5xl'> 10 </p>
-                            <p className='text-xl'> Palabras Corregidas </p>
+                            <p className='text-xl'> {t('pages.results.correctedWords')} </p>
                         </Box>
                     </Box>
 
@@ -45,12 +48,12 @@ function ResultsPage() {
                         >
                             <Box className=''>
                                 <p className='font-bold text-5xl'> 70 </p>
-                                <p className='text-xl'> Palabras Totales </p>
+                                <p className='text-xl'> {t('pages.results.totalWords')} </p>
                             </Box>
                         </Box>
 
                         <Box className=' text-accent pr-8 flex pt-4 justify-around items-center gap-8'>
-                            <p className='text-xl'> Dominio de Vocabulario </p>
+                            <p className='text-xl'> {t('pages.results.vocabularyMastery')} </p>
                             <p className='text-7xl font-bold'> 87.62 % </p>
                         </Box>
                     </Box>
@@ -65,9 +68,9 @@ function ResultsPage() {
 
                     {/* Buttons */}
                     <Box className='flex flex-col gap-2'>
-                        <PrimaryOptionButton buttonMessage='Repetir leccion' />
-                        <TertiaryOptionButton buttonMessage='Practicar solo errores' />
-                        <SecondaryOptionButton buttonMessage='Regresar al inicio' />
+                        <PrimaryOptionButton buttonMessage={t('components.buttons.options.repeatLesson')} />
+                        <TertiaryOptionButton buttonMessage={t('components.buttons.options.practiceErrors')} />
+                        <SecondaryOptionButton buttonMessage={t('components.buttons.options.returnHome')} />
                     </Box>
                 </Box>
 
