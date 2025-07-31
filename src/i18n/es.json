@@ -9,6 +9,14 @@
         },
         "lesson": {
             "imageNotShown": "Imagen de"
+        },
+        "results": {
+            "title": "Resultados de la leccion",
+            "correctWords": "Palabras Correctas",
+            "incorrectWords": "Palabras Incorrectas",
+            "correctedWords": "Palabras Corregidas",
+            "totalWords": "Palabras Totales",
+            "vocabularyMastery": "Dominio de Vocabulario"
         }
     },
     "components": {
@@ -19,7 +27,10 @@
                 "topVerbs": "Top 500 Verbos",
                 "topWords": "Top 1,000 Palabras",
                 "vocabularyDB": "Cantidad de Vocabulario",
-                "swapLanguage": "Switch to English"
+                "swapLanguage": "Switch to English",
+                "repeatLesson": "Repetir leccion",
+                "practiceErrors": "Practicar solo errores",
+                "returnHome": "Regresar al inicio"
             },
             "main": {
                 "return": "Volver"

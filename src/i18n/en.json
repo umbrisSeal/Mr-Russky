@@ -9,6 +9,14 @@
         },
         "lesson": {
             "imageNotShown": "Image showing"
+        },
+        "results": {
+            "title": "Lesson Results",
+            "correctWords": "Correct Words",
+            "incorrectWords": "Incorrect Words",
+            "correctedWords": "Fixed Words",
+            "totalWords": "Total Words",
+            "vocabularyMastery": "Vocabulary Mastery"
         }
     },
     "components": {
@@ -19,7 +27,10 @@
                 "topVerbs": "Top 500 Verbs",
                 "topWords": "Top 1,000 Words",
                 "vocabularyDB": "Vocabulary Database",
-                "swapLanguage": "Cambiar a Español"
+                "swapLanguage": "Cambiar a Español",
+                "repeatLesson": "Repeat lesson",
+                "practiceErrors": "Practice errors only",
+                "returnHome": "Return home"
             },
             "main": {
                 "return": "Go Back"
