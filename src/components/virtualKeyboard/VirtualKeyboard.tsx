@@ -21,8 +21,8 @@ function VirtualKeyboard() {
                                     className='
                                         bg-accent2
                                         w-6 h-6 pt-1 mb-0.5
-                                        shadow-md
-                                        rounded-lg
+                                        shadow-xl/30
+                                        rounded-md
                                         text-lg text-accent
                                         font-bold
                                         flex items-center justify-center'
