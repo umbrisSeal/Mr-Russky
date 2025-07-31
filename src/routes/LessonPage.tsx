@@ -20,14 +20,6 @@ function LessonPage() {
     // This is a mock, real vocabulary must be choosen in a React Router loader function to obtain the real vocabulary for this particular lesson.
     const mockLessonVocabulary : Noun[] = exampleNouns;
 
-    // handle boton ok y boton hint.
-    /*
-        Status: Showing response?
-        Buttons: Hint y OK.
-        Response Status: Array or object presented (charcater, isCorrect).
-    */
-
-
     function handleHintButton() {
         console.log("You have pressed HINT");
     };
