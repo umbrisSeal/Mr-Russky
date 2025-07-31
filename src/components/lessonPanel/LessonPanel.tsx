@@ -28,6 +28,9 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
     }, [nextURLsArray]);
 
     function handleOkButton() {
+        if(userAnswer.trim() === '') return;    // Do not accept an empty answer.
+
+        // Also, change input state if answer is shown. Refocus cursor in new exercice
         if(showingAnswer) setUserAnswer(''); // Next exercice, clear input.
         okButtonFn(userAnswer);   // Let parent component continue the lesson.
     };
@@ -36,6 +39,20 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
         es: currentExcercice.translation.es,
         en: currentExcercice.translation.en
     };
+
+    useEffect(() => {
+        function handleKeyDown(event: KeyboardEvent) {
+            if(event.key === 'Enter') {
+                event.preventDefault(); // Avoid re-click.
+                handleOkButton();
+            };
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        }
+    }, [userAnswer, showingAnswer]);
 
 
     // Issue a problem in this component. Using <Box> with image background is not a proper solution.
@@ -70,7 +87,7 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
             {/* Controls Container */}
             <Box className='border-secondary border-3 border-top-only flex justify-center items-center gap-8 py-4'>
                 <HintButton buttonMessage={t('components.buttons.lesson.hint')} />
-                <AnswerInput value={userAnswer} setValue={setUserAnswer} />
+                <AnswerInput value={userAnswer} setValue={setUserAnswer} blockInput={showingAnswer} />
                 <OkButton buttonMessage={t('components.buttons.lesson.ok')} onClickFn={handleOkButton} />
             </Box>
 
