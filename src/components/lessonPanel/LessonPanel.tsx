@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Box } from "@mui/material";
 import type { LessonPanelProps } from "./lessonPanelTypes";
@@ -11,6 +11,7 @@ import AnswerStatusContainer from '../answerStatusContainer/AnswerStatusContaine
 function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showingAnswer, okButtonFn} : LessonPanelProps) {
     const { t, i18n } = useTranslation();
     const [userAnswer, setUserAnswer] = useState<string>('');
+    const inputAnswerRef = useRef<HTMLInputElement>(null);
 
     const currentExcercice = lessonVocabulary[currentExcerciceIndex];
 
@@ -29,9 +30,11 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
 
     function handleOkButton() {
         if(userAnswer.trim() === '') return;    // Do not accept an empty answer.
-
-        // Also, change input state if answer is shown. Refocus cursor in new exercice
-        if(showingAnswer) setUserAnswer(''); // Next exercice, clear input.
+        if(showingAnswer) {
+            // Next exercice, clear input and refocus <AnswerInput>
+            setUserAnswer('');
+            setTimeout(() => { inputAnswerRef.current?.focus(); }, 0);
+        }
         okButtonFn(userAnswer);   // Let parent component continue the lesson.
     };
 
@@ -87,7 +90,7 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
             {/* Controls Container */}
             <Box className='border-secondary border-3 border-top-only flex justify-center items-center gap-8 py-4'>
                 <HintButton buttonMessage={t('components.buttons.lesson.hint')} />
-                <AnswerInput value={userAnswer} setValue={setUserAnswer} blockInput={showingAnswer} />
+                <AnswerInput value={userAnswer} setValue={setUserAnswer} blockInput={showingAnswer} inputRef={inputAnswerRef} />
                 <OkButton buttonMessage={t('components.buttons.lesson.ok')} onClickFn={handleOkButton} />
             </Box>
 

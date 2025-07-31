@@ -2,7 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import type { InputProps } from './inputTypes';
 
-function AnswerInput({value, setValue, blockInput} : InputProps & { blockInput: boolean }) {
+function AnswerInput({value, setValue, blockInput, inputRef} : InputProps & { blockInput: boolean, inputRef: React.Ref<HTMLInputElement> }) {
     const { t } = useTranslation();
 
     return (
@@ -10,6 +10,7 @@ function AnswerInput({value, setValue, blockInput} : InputProps & { blockInput: 
             type='text'
             placeholder={t('components.inputs.answerPlaceholder')}
             value={value}
+            ref={inputRef}
             disabled={blockInput}
             onChange={(event) => setValue(event.target.value)}
             className='
