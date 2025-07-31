@@ -35,12 +35,12 @@ function LessonPage() {
                 setIncorrectWords([...incorrectWords, exampleNouns[currentExcerciceIndex].id]);
             }
             setShowingAnswer(!showingAnswer);
+            setCurrentProgress(currentProgress + 1); // Increase bar progress when submiting an answer.
 
         } else {
             // Continue with next exercice.
             setShowingAnswer(!showingAnswer);
             setCurrentExcerciceIndex((prev) => Math.min(prev + 1, mockLessonVocabulary.length - 1));
-            setCurrentProgress(currentProgress + 1);
             // Must handle finish lesson when there are no more exercices.
         }
     };
