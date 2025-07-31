@@ -72,9 +72,9 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
             <Box className='flex-1 border-secondary border-3 border-top-only flex flex-col'>
                 {/* Image Container */}
                 {/* MAKE AN ISSUE FOR THIS PART! */}
-                <Box className='bg-pink-700 px-10 py-4 flex justify-center h-full'>
+                <Box className='px-10 py-4 flex justify-center h-full'>
                     <Box
-                        className='bg-gray-600 w-full max-w-[740px] [height:calc(50vh-60px)] flex justify-center items-center'
+                        className='bg-secondary-transparent rounded-xl border-2 border-secondary w-full max-w-[740px] [height:calc(50vh-60px)] flex justify-center items-center'
                     >
                         <img
                             className="h-full w-auto object-fill"
