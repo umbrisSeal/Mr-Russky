@@ -68,7 +68,7 @@ function LessonPage() {
                             showingAnswer={showingAnswer}
                         />
                     </Box>
-                    <Box className='bg-blue-900 w-full h-[180px] flex flex-col items-center'>
+                    <Box className='w-full h-[180px] flex flex-col items-center'>
                         <ProgressBar progressValue={currentProgress} maxProgressValue={mockLessonVocabulary.length} />
                         <VirtualKeyboard />
                     </Box>
