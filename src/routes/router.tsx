@@ -4,6 +4,7 @@ import HomePage from "./HomePage";
 import WordDatabasePage from "./WordDatabasePage";
 import MainLayout from "../components/layout/MainLayout";
 import LessonPage from "./LessonPage";
+import ResultsPage from "./ResultsPage";
 
 
 export const router = createBrowserRouter([
@@ -13,7 +14,8 @@ export const router = createBrowserRouter([
         element: <MainLayout />,
         children: [
             { path: '/vocabulary', element: <WordDatabasePage /> },
-            { path: '/lesson', element: <LessonPage /> }
+            { path: '/lesson', element: <LessonPage /> },
+            { path: '/results', element: <ResultsPage /> }
         ]
     },
     { path: '*', element: <App /> }                         // For 404 error.
