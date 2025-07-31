@@ -14,6 +14,7 @@ function LessonPage() {
     const [correctWords, setCorrectWords] = useState<string[]>([]);
     const [incorrectWords, setIncorrectWords] = useState<string[]>([]);
     const [currentExcerciceIndex, setCurrentExcerciceIndex] = useState<number>(0);
+    const [currentProgress, setCurrentProgress] = useState<number>(0);
     const [showingAnswer, setShowingAnswer] = useState<boolean>(false);
 
     // This is a mock, real vocabulary must be choosen in a React Router loader function to obtain the real vocabulary for this particular lesson.
@@ -46,6 +47,7 @@ function LessonPage() {
             // Continue with next exercice.
             setShowingAnswer(!showingAnswer);
             setCurrentExcerciceIndex((prev) => Math.min(prev + 1, mockLessonVocabulary.length - 1));
+            setCurrentProgress(currentProgress + 1);
             // Must handle finish lesson when there are no more exercices.
         }
     };
@@ -74,7 +76,7 @@ function LessonPage() {
                         />
                     </Box>
                     <Box className='bg-blue-900 w-full h-[180px] flex flex-col items-center'>
-                        <ProgressBar progressValue={1} maxProgressValue={12} />
+                        <ProgressBar progressValue={currentProgress} maxProgressValue={mockLessonVocabulary.length} />
                         <p className=""> Virtual Keyboard. </p>
                     </Box>
                 </Box>
