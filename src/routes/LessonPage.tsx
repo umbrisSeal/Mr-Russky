@@ -9,6 +9,7 @@ import { useState } from "react";
 import { exampleNouns } from "../data/words/inflected/nouns/school";
 import type { Noun } from "../data/words/inflected/nouns/noun";
 import ProgressBar from "../components/progressBar/ProgressBar";
+import VirtualKeyboard from "../components/virtualKeyboard/VirtualKeyboard";
 
 function LessonPage() {
     const [correctWords, setCorrectWords] = useState<string[]>([]);
@@ -69,7 +70,7 @@ function LessonPage() {
                     </Box>
                     <Box className='bg-blue-900 w-full h-[180px] flex flex-col items-center'>
                         <ProgressBar progressValue={currentProgress} maxProgressValue={mockLessonVocabulary.length} />
-                        <p className=""> Virtual Keyboard. </p>
+                        <VirtualKeyboard />
                     </Box>
                 </Box>
 
