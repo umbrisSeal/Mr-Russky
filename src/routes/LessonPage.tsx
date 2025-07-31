@@ -8,6 +8,7 @@ import { useState } from "react";
 
 import { exampleNouns } from "../data/words/inflected/nouns/school";
 import type { Noun } from "../data/words/inflected/nouns/noun";
+import ProgressBar from "../components/progressBar/ProgressBar";
 
 function LessonPage() {
     const [correctWords, setCorrectWords] = useState<string[]>([]);
@@ -72,8 +73,8 @@ function LessonPage() {
                             showingAnswer={showingAnswer}
                         />
                     </Box>
-                    <Box className='bg-blue-900 w-full h-[180px]'>
-                        <p className=""> Progress bar. </p>
+                    <Box className='bg-blue-900 w-full h-[180px] flex flex-col items-center'>
+                        <ProgressBar />
                         <p className=""> Virtual Keyboard. </p>
                     </Box>
                 </Box>
