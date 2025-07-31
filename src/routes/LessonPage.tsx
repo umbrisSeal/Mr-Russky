@@ -74,7 +74,7 @@ function LessonPage() {
                         />
                     </Box>
                     <Box className='bg-blue-900 w-full h-[180px] flex flex-col items-center'>
-                        <ProgressBar />
+                        <ProgressBar progressValue={1} maxProgressValue={12} />
                         <p className=""> Virtual Keyboard. </p>
                     </Box>
                 </Box>
