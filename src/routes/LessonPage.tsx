@@ -61,8 +61,8 @@ function LessonPage() {
                 </Box>
 
                 {/* Central Secction */}
-                <Box className='bg-blue-700 p-2 flex-70 flex flex-col items-center'>
-                    <Box className='bg-blue-900 w-full flex-1'>
+                <Box className='p-2 flex-70 flex flex-col items-center'>
+                    <Box className='w-full flex-1'>
                         <LessonPanel
                             wordType="Существительное"
                             currentExcerciceIndex={currentExcerciceIndex}
@@ -72,8 +72,10 @@ function LessonPage() {
                             showingAnswer={showingAnswer}
                         />
                     </Box>
-                    <p className="bg-blue-800 w-full h-[120px]"> Progress bar and virtual keyboard. </p>
-                    <p className="bg-blue-950 w-full h-[60px]"> Exit button. </p>
+                    <Box className='bg-blue-900 w-full h-[180px]'>
+                        <p className=""> Progress bar. </p>
+                        <p className=""> Virtual Keyboard. </p>
+                    </Box>
                 </Box>
 
                 {/* Answer Container (Incorrect Words) */}
