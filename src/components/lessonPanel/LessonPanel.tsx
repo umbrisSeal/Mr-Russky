@@ -74,7 +74,7 @@ function LessonPanel({wordType, currentExcerciceIndex, lessonVocabulary, showing
                 {/* MAKE AN ISSUE FOR THIS PART! */}
                 <Box className='px-10 py-4 flex justify-center h-full'>
                     <Box
-                        className='bg-secondary-transparent rounded-xl border-2 border-secondary w-full max-w-[740px] [height:calc(50vh-60px)] flex justify-center items-center'
+                        className='bg-secondary-transparent rounded-xl border-2 border-secondary overflow-hidden w-full max-w-[740px] [height:calc(50vh-60px)] flex justify-center items-center'
                     >
                         <img
                             className="h-full w-auto object-fill"
