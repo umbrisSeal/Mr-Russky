@@ -5,6 +5,7 @@ import WordDatabasePage from "./WordDatabasePage";
 import MainLayout from "../components/layout/MainLayout";
 import LessonPage from "./LessonPage";
 import ResultsPage from "./ResultsPage";
+import { lessonLoader } from "./loaders/lessonLoader";
 
 
 export const router = createBrowserRouter([
@@ -14,7 +15,7 @@ export const router = createBrowserRouter([
         element: <MainLayout />,
         children: [
             { path: '/vocabulary', element: <WordDatabasePage /> },
-            { path: '/lesson', element: <LessonPage /> },
+            { path: '/lesson', element: <LessonPage />, loader: lessonLoader },
             { path: '/results', element: <ResultsPage /> }
         ]
     },
