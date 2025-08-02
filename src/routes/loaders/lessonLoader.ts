@@ -19,15 +19,15 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
     if(!studyAll) navigateTo('/error'); // Wrong params recieved.
 
     const appVocabulary : Noun[] = exampleNouns;
-    let vocabularyToStudy = [];
+    let lessonVocabulary = [];
 
     if(studyAll === '1') {
         // Study all vocabulary.
-        vocabularyToStudy = shuffleVocabulary(appVocabulary);
+        lessonVocabulary = shuffleVocabulary(appVocabulary);
     } else {
         // Only study 10 random words.
-        vocabularyToStudy = shuffleVocabulary(appVocabulary.slice(0, 10));
+        lessonVocabulary = shuffleVocabulary(appVocabulary.slice(0, 10));
     }
 
-    return vocabularyToStudy;
+    return lessonVocabulary;
 };
