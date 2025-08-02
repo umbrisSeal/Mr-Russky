@@ -11,13 +11,10 @@ import { shuffleVocabulary } from "../../utils/functions/shuffleVocabulary";
 
 export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<Noun[]> {
     const navigateTo = useNavigate();
-
     const url = new URL(request.url);
     
     // Temporal params:
     const studyAll = url.searchParams.get("studyAll");
-
-    console.log(studyAll);
 
     if(!studyAll) navigateTo('/error'); // Wrong params recieved.
 
