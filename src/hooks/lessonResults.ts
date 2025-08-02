@@ -1,12 +1,4 @@
 
-
-
-/*
-    wrongAnswersArray           -> Keep for calculations
-    correctAnswersArray         -> Keep for calculations
-*/
-
-
 import { create } from "zustand"
 import type { Noun } from "../data/words/inflected/nouns/noun";
 
