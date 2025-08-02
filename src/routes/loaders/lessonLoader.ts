@@ -8,10 +8,12 @@ import type { Noun } from "../../data/words/inflected/nouns/noun";
 import { exampleNouns } from "../../data/words/inflected/nouns/school";
 import { shuffleVocabulary } from "../../utils/functions/shuffleVocabulary";
 import { useLessonVocabularyStore } from "../../hooks/lessonVocabulary";
+import { useLessonResultsStore } from "../../hooks/lessonResults";
 
 
 export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<Noun[]> {
     const lessonVocabularyStore = useLessonVocabularyStore.getState();
+    const lessonResultsStore = useLessonResultsStore.getState();
     const url = new URL(request.url);
     
     // Temporal params:
@@ -31,6 +33,7 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
     }
 
     lessonVocabularyStore.setLessonVocabulary([...lessonVocabulary]);
+    lessonResultsStore.resetResults();
 
     return lessonVocabulary;
 };
