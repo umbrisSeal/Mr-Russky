@@ -21,10 +21,13 @@ function HomePage() {
         i18n.changeLanguage(newLanguage);
     };
 
-    function dummy() {
-        // Temporal function just to enter "/lesson".
-        navigateTo('/lesson');
-    }
+    function handleStudyAll() {
+        navigateTo('/lesson?studyAll=1');
+    };
+
+    function handleStartLesson() {
+        navigateTo('/lesson?studyAll=0');
+    };
 
     return (
         <PageMotionWrapper>
@@ -41,10 +44,17 @@ function HomePage() {
                 </Box>
 
                 <Box className='flex flex-col gap-3 items-center'>
-                    <PrimaryOptionButton buttonMessage={t('components.buttons.options.customLesson')} onClickFn={dummy} />
+                    {/*
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.topNouns')} />
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.topVerbs')} />
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.topWords')} />
+                    // Start Lesson
+                    // Study Full Vocabulary
+                    // Vocabulary DB
+                    // Swap Language.
+                    */}
+                    <PrimaryOptionButton buttonMessage={t('components.buttons.options.startLesson')} onClickFn={handleStartLesson} />
+                    <SecondaryOptionButton buttonMessage={t('components.buttons.options.studyAll')} onClickFn={handleStudyAll} />
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.vocabularyDB')} onClickFn={handleVocabularyButton} />
                     <SecondaryOptionButton buttonMessage={t('components.buttons.options.swapLanguage')} onClickFn={handleSwitchLanguage} />
                 </Box>
