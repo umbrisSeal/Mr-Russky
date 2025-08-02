@@ -42,10 +42,14 @@ function LessonPage() {
             setCurrentProgress(currentProgress + 1); // Increase bar progress when submiting an answer.
 
         } else {
-            // Continue with next exercice.
-            setShowingAnswer(!showingAnswer);
-            setCurrentExcerciceIndex((prev) => Math.min(prev + 1, lessonVocabulary.length - 1));
-            // Must handle finish lesson when there are no more exercices.
+            if(currentExcerciceIndex+1 >= lessonVocabulary.length) {
+                // Lesson Finished
+                navigateTo('/results');
+            } else {
+                // Continue with next exercice.
+                setShowingAnswer(!showingAnswer);
+                setCurrentExcerciceIndex(currentExcerciceIndex+1);
+            }
         }
     };
 
