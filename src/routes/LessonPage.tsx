@@ -5,14 +5,16 @@ import AnswersContainer from "../components/answersContainer/AnswersContainer";
 import LessonPanel from "../components/lessonPanel/LessonPanel";
 import { useState } from "react";
 
-import { exampleNouns } from "../data/words/inflected/nouns/school";
 import ProgressBar from "../components/progressBar/ProgressBar";
 import VirtualKeyboard from "../components/virtualKeyboard/VirtualKeyboard";
 import { useLoaderData, useNavigate } from "react-router";
+import { useLessonResultsStore } from '../hooks/lessonResults';
 
 function LessonPage() {
     const navigateTo = useNavigate();
     const lessonVocabulary = useLoaderData();
+    const addWrongAnswer = useLessonResultsStore((state) => state.addWrongAnswer);
+    const addCorrectAnswer = useLessonResultsStore((state) => state.addCorrectAnswer);
     const [correctWords, setCorrectWords] = useState<string[]>([]);
     const [incorrectWords, setIncorrectWords] = useState<string[]>([]);
     const [currentExcerciceIndex, setCurrentExcerciceIndex] = useState<number>(0);
@@ -32,11 +34,13 @@ function LessonPage() {
     function handleOkButton(userAnswer: string) {
         if(!showingAnswer) {
             // Evaluate answer, add the word to the correspoding list and show feedback to user.
-            const answerCorrect = userAnswer.toLowerCase() === exampleNouns[currentExcerciceIndex].id.toLowerCase();
+            const answerCorrect = userAnswer.toLowerCase() === lessonVocabulary[currentExcerciceIndex].id.toLowerCase();
             if(answerCorrect) {
-                setCorrectWords([...correctWords, exampleNouns[currentExcerciceIndex].id]);
+                addCorrectAnswer(lessonVocabulary[currentExcerciceIndex]);
+                setCorrectWords([...correctWords, lessonVocabulary[currentExcerciceIndex].id]);
             } else {
-                setIncorrectWords([...incorrectWords, exampleNouns[currentExcerciceIndex].id]);
+                addWrongAnswer(lessonVocabulary[currentExcerciceIndex]);
+                setIncorrectWords([...incorrectWords, lessonVocabulary[currentExcerciceIndex].id]);
             }
             setShowingAnswer(!showingAnswer);
             setCurrentProgress(currentProgress + 1); // Increase bar progress when submiting an answer.
