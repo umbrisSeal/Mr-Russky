@@ -5,7 +5,7 @@
 
 import { type LoaderFunctionArgs } from "react-router";
 import type { Noun } from "../../data/words/inflected/nouns/noun";
-import { exampleNouns } from "../../data/words/inflected/nouns/initialNouns";
+import { exampleNouns } from "../../data/words/inflected/nouns/school";
 import { shuffleVocabulary } from "../../utils/functions/shuffleVocabulary";
 
 
