@@ -7,6 +7,7 @@ import { type LoaderFunctionArgs } from "react-router";
 import type { Noun } from "../../data/words/inflected/nouns/noun";
 import { exampleNouns } from "../../data/words/inflected/nouns/school";
 import { shuffleVocabulary } from "../../utils/functions/shuffleVocabulary";
+import { setCustomCookie } from "../../utils/functions/setCustomCookie";
 
 
 export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<Noun[]> {
@@ -18,7 +19,7 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
     if(!studyAll) return []; // Wrong params recieved.
 
     const appVocabulary : Noun[] = exampleNouns;
-    let lessonVocabulary = [];
+    let lessonVocabulary : Noun[] = [];
 
     if(studyAll === '1') {
         // Study all vocabulary.
@@ -27,6 +28,8 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
         // Only study 10 random words.
         lessonVocabulary = shuffleVocabulary(appVocabulary.slice(0, 10));
     }
+
+    setCustomCookie('lessonConfig', request.url);
 
     return lessonVocabulary;
 };
