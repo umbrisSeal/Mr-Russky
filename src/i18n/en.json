@@ -55,7 +55,9 @@
                 "swapLanguage": "Cambiar a Español",
                 "repeatLesson": "Repeat lesson",
                 "practiceErrors": "Practice errors only",
-                "returnHome": "Return home"
+                "returnHome": "Return home",
+                "startLesson": "Start Lesson",
+                "studyAll": "Study All Vocab"
             },
             "main": {
                 "return": "Go Back"

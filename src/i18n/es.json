@@ -55,7 +55,9 @@
                 "swapLanguage": "Switch to English",
                 "repeatLesson": "Repetir leccion",
                 "practiceErrors": "Practicar solo errores",
-                "returnHome": "Regresar al inicio"
+                "returnHome": "Regresar al inicio",
+                "startLesson": "Iniciar Leccion",
+                "studyAll": "Repasar Todo"
             },
             "main": {
                 "return": "Volver"
