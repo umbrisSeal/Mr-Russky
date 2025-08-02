@@ -7,10 +7,11 @@ import { type LoaderFunctionArgs } from "react-router";
 import type { Noun } from "../../data/words/inflected/nouns/noun";
 import { exampleNouns } from "../../data/words/inflected/nouns/school";
 import { shuffleVocabulary } from "../../utils/functions/shuffleVocabulary";
-import { setCustomCookie } from "../../utils/functions/setCustomCookie";
+import { useLessonVocabularyStore } from "../../hooks/lessonVocabulary";
 
 
 export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<Noun[]> {
+    const lessonVocabularyStore = useLessonVocabularyStore.getState();
     const url = new URL(request.url);
     
     // Temporal params:
@@ -29,7 +30,7 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
         lessonVocabulary = shuffleVocabulary(appVocabulary.slice(0, 10));
     }
 
-    setCustomCookie('lessonConfig', request.url);
+    lessonVocabularyStore.setLessonVocabulary([...lessonVocabulary]);
 
     return lessonVocabulary;
 };
