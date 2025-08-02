@@ -1,5 +1,4 @@
-// import React from 'react'
-
+import React from 'react'
 import { Box } from "@mui/material";
 import PageMotionWrapper from "../components/layout/PageMotionWrapper";
 import AnswersContainer from "../components/answersContainer/AnswersContainer";
@@ -7,19 +6,24 @@ import LessonPanel from "../components/lessonPanel/LessonPanel";
 import { useState } from "react";
 
 import { exampleNouns } from "../data/words/inflected/nouns/school";
-import type { Noun } from "../data/words/inflected/nouns/noun";
 import ProgressBar from "../components/progressBar/ProgressBar";
 import VirtualKeyboard from "../components/virtualKeyboard/VirtualKeyboard";
+import { useLoaderData, useNavigate } from "react-router";
 
 function LessonPage() {
+    const navigateTo = useNavigate();
+    const lessonVocabulary = useLoaderData();
     const [correctWords, setCorrectWords] = useState<string[]>([]);
     const [incorrectWords, setIncorrectWords] = useState<string[]>([]);
     const [currentExcerciceIndex, setCurrentExcerciceIndex] = useState<number>(0);
     const [currentProgress, setCurrentProgress] = useState<number>(0);
     const [showingAnswer, setShowingAnswer] = useState<boolean>(false);
 
-    // This is a mock, real vocabulary must be choosen in a React Router loader function to obtain the real vocabulary for this particular lesson.
-    const mockLessonVocabulary : Noun[] = exampleNouns;
+    // First of all, check if there is vocabulary to study. If recieve an empty string, return error.
+    if(lessonVocabulary.length === 0) {
+        navigateTo('/error');
+        return <React.Fragment></React.Fragment>
+    }
 
     function handleHintButton() {
         console.log("You have pressed HINT");
@@ -40,7 +44,7 @@ function LessonPage() {
         } else {
             // Continue with next exercice.
             setShowingAnswer(!showingAnswer);
-            setCurrentExcerciceIndex((prev) => Math.min(prev + 1, mockLessonVocabulary.length - 1));
+            setCurrentExcerciceIndex((prev) => Math.min(prev + 1, lessonVocabulary.length - 1));
             // Must handle finish lesson when there are no more exercices.
         }
     };
@@ -62,14 +66,14 @@ function LessonPage() {
                         <LessonPanel
                             wordType="Существительное"
                             currentExcerciceIndex={currentExcerciceIndex}
-                            lessonVocabulary={mockLessonVocabulary}
+                            lessonVocabulary={lessonVocabulary}
                             hintButtonFn={handleHintButton}
                             okButtonFn={handleOkButton}
                             showingAnswer={showingAnswer}
                         />
                     </Box>
                     <Box className='w-full h-[180px] flex flex-col items-center'>
-                        <ProgressBar progressValue={currentProgress} maxProgressValue={mockLessonVocabulary.length} />
+                        <ProgressBar progressValue={currentProgress} maxProgressValue={lessonVocabulary.length} />
                         <VirtualKeyboard />
                     </Box>
                 </Box>
