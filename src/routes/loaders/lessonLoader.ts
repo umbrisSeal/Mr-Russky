@@ -1,6 +1,8 @@
 /*
     This loader filters the vocabulary of all the app and presents the specific vocabulary for a particular lesson.
     Also, the result (or the filter) should be added as a cookie in the app to allow user to repeat this lesson.
+
+    This loader will need a LOT of refactoring.
 */
 
 import { redirect, type LoaderFunctionArgs } from "react-router";
@@ -39,7 +41,14 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
 
 
     lessonVocabularyStore.setLessonVocabulary([...lessonVocabulary]);
-    lessonResultsStore.resetResults();
+    
+    if(repeatLesson) {
+        // Keep track of previous results. (To meassure improvement)
+        lessonResultsStore.resetResults();
+    } else {
+        // Reset all results, start from fresh.
+        lessonResultsStore.resetAllResults();
+    }
 
     if(lessonVocabulary.length === 0) throw redirect('/error'); // Vocabulary to study was empty.
 

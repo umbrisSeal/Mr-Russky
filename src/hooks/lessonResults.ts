@@ -10,6 +10,7 @@ interface ResultsStore {
     addWrongAnswer: (word: Noun) => void;
     addCorrectAnswer: (word: Noun) => void;
     resetResults: () => void;
+    resetAllResults: () => void;
 };
 
 export const useLessonResultsStore = create<ResultsStore>((set) => ({
@@ -28,5 +29,11 @@ export const useLessonResultsStore = create<ResultsStore>((set) => ({
         previousCorrectAnswers: [...state.correctAnswers],
         wrongAnswers: [],
         correctAnswers: [],
+    })),
+    resetAllResults: () => set(() => ({
+        previousCorrectAnswers: [],
+        previousWrongAnswers: [],
+        correctAnswers: [],
+        wrongAnswers: [],
     }))
 }));
