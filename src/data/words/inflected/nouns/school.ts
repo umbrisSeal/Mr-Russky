@@ -40,13 +40,6 @@ export const school: Noun[] = [
                                 Д д
     ----------------------------------------------------------
     */
-    { id: "доска", gender: "female", translation: {es: "pizarra", en: ""},
-        cases: {singular: {nominative: "доска", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
-            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/44/Pizarra_ies_parador_2.jpg", imageAttributon: "", imageSource: ""},
-        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
-    },
-    
     { id: "дверь", gender: "female", translation: {es: "puerta", en: ""},
         cases: {singular: {nominative: "дверь", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
@@ -57,6 +50,12 @@ export const school: Noun[] = [
         cases: {singular: {nominative: "домашнее задание", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
         image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a3/SAKURAKO_-_Homework_for_summer_vacation._%2820028533861%29.jpg", imageAttributon: "", imageSource: ""},
+        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
+    },
+    { id: "доска", gender: "female", translation: {es: "pizarra", en: ""},
+        cases: {singular: {nominative: "доска", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
+        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/44/Pizarra_ies_parador_2.jpg", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
     /*
@@ -94,11 +93,10 @@ export const school: Noun[] = [
                                 К к
     ----------------------------------------------------------
     */
-    { id: "книга", gender: "female", translation: {es: "libro", en: ""},
-        cases: {singular: {nominative: "книга", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+    { id: "класс", gender: "male", translation: {es: "clase (el grupo)", en: ""},
+        cases: {singular: {nominative: "класс", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Latin_dictionary.jpg", imageAttributon: "", imageSource: ""},
-        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
+        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/Lagere_School_te_Putten._Klassefoto%2C_Bestanddeelnr_903-1035.jpg", imageAttributon: "", imageSource: ""}, difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
     { id: "карандаш", gender: "male", translation: {es: "lapiz", en: ""},
         cases: {singular: {nominative: "карандаш", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
@@ -106,10 +104,10 @@ export const school: Noun[] = [
         image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Pencil_on_a_table.jpg", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
-    { id: "класс", gender: "male", translation: {es: "clase (el grupo)", en: ""},
-        cases: {singular: {nominative: "класс", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+    { id: "книга", gender: "female", translation: {es: "libro", en: ""},
+        cases: {singular: {nominative: "книга", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/Lagere_School_te_Putten._Klassefoto%2C_Bestanddeelnr_903-1035.jpg", imageAttributon: "", imageSource: ""},
+        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Latin_dictionary.jpg", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
     /*
@@ -154,16 +152,16 @@ export const school: Noun[] = [
                                 Р р
     ----------------------------------------------------------
     */
-    { id: "рюкзак", gender: "male", translation: {es: "mochila", en: ""},
-        cases: {singular: {nominative: "рюкзак", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
-            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/40/Zaino_rosa.jpg", imageAttributon: "", imageSource: ""},
-        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
-    },
     { id: "ручка", gender: "female", translation: {es: "boligrafo", en: ""},
         cases: {singular: {nominative: "ручка", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
         image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e1/03-BICcristal2008-03-26.jpg", imageAttributon: "", imageSource: ""},
+        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
+    },
+    { id: "рюкзак", gender: "male", translation: {es: "mochila", en: ""},
+        cases: {singular: {nominative: "рюкзак", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
+        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/40/Zaino_rosa.jpg", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
     /*
@@ -171,16 +169,16 @@ export const school: Noun[] = [
                                 С с
     ----------------------------------------------------------
     */
-    { id: "стул", gender: "male", translation: {es: "silla", en: ""},
-        cases: {singular: {nominative: "стул", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
-            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/86/Fauteuil_Riviera_Chaise_Bleue_Neptune_SBR.jpg", imageAttributon: "", imageSource: ""},
-        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
-    },
     { id: "стол", gender: "male", translation: {es: "mesa", en: ""},
         cases: {singular: {nominative: "стол", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
         image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Dinner_table_side_pine_wood_large_table.png", imageAttributon: "", imageSource: ""},
+        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
+    },
+    { id: "стул", gender: "male", translation: {es: "silla", en: ""},
+        cases: {singular: {nominative: "стул", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
+        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/86/Fauteuil_Riviera_Chaise_Bleue_Neptune_SBR.jpg", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
     /*
@@ -199,16 +197,10 @@ export const school: Noun[] = [
                                 У у
     ----------------------------------------------------------
     */
-    { id: "учитель", gender: "male", translation: {es: "maestro", en: ""},
-        cases: {singular: {nominative: "учитель", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+    { id: "урок", gender: "male", translation: {es: "leccion", en: ""},
+        cases: {singular: {nominative: "урок", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "https://commons.wikimedia.org/wiki/File:Glen_Caruso,_A_Man_Who_Enjoys_Teaching.jpg", imageAttributon: "", imageSource: ""},
-        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
-    },
-    { id: "учительница", gender: "female", translation: {es: "maestra", en: ""},
-        cases: {singular: {nominative: "учительница", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
-            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e6/A_college_professor_teaching_in_a_university_classroom_full_of_students_in_Tennessee%2C_United_States_06.jpg", imageAttributon: "", imageSource: ""},
+        image: {imageUrl: "", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
     { id: "ученик", gender: "male", translation: {es: "el estudiante", en: ""},
@@ -223,10 +215,16 @@ export const school: Noun[] = [
         image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/28/Taiwanese_female_student_during_the_Japanese_colonial_era_01.jpg", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
-    { id: "урок", gender: "male", translation: {es: "leccion", en: ""},
-        cases: {singular: {nominative: "урок", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+    { id: "учитель", gender: "male", translation: {es: "maestro", en: ""},
+        cases: {singular: {nominative: "учитель", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
             plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
-        image: {imageUrl: "", imageAttributon: "", imageSource: ""},
+        image: {imageUrl: "https://commons.wikimedia.org/wiki/File:Glen_Caruso,_A_Man_Who_Enjoys_Teaching.jpg", imageAttributon: "", imageSource: ""},
+        difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
+    },
+    { id: "учительница", gender: "female", translation: {es: "maestra", en: ""},
+        cases: {singular: {nominative: "учительница", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""},
+            plural: {nominative: "", genitive: "", dative: "", accusative: "", instrumental: "", prepositional: ""}},
+        image: {imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e6/A_college_professor_teaching_in_a_university_classroom_full_of_students_in_Tennessee%2C_United_States_06.jpg", imageAttributon: "", imageSource: ""},
         difficulty: 1, group: 'A', categories: ['school'], notes: "", example: {ru: "", es: "", en: ""}, verified: false, completed: false,
     },
     /*
