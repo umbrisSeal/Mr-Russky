@@ -3,7 +3,7 @@
     Also, the result (or the filter) should be added as a cookie in the app to allow user to repeat this lesson.
 */
 
-import { type LoaderFunctionArgs } from "react-router";
+import { redirect, type LoaderFunctionArgs } from "react-router";
 import type { Noun } from "../../data/words/inflected/nouns/noun";
 import { exampleNouns } from "../../data/words/inflected/nouns/school";
 import { shuffleVocabulary } from "../../utils/functions/shuffleVocabulary";
@@ -40,6 +40,8 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
 
     lessonVocabularyStore.setLessonVocabulary([...lessonVocabulary]);
     lessonResultsStore.resetResults();
+
+    if(lessonVocabulary.length === 0) throw redirect('/error'); // Vocabulary to study was empty.
 
     return lessonVocabulary;
 };
