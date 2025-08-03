@@ -29,6 +29,9 @@ function ResultsPage() {
     const vocabularyMasteryImprovement = vocabularyMastery - previousVocabularyMastery;
     const repeatedLesson = previousCorrectAnswers.length + previousWrongAnswers.length !== 0;
 
+    // Calculate the correct Vocabulary Mastery message:
+    const masteryCode = Math.floor(vocabularyMastery / 5);
+
 
     function handleRepeatLesson() {
         navigateTo('/lesson?repeat=1');
@@ -101,7 +104,7 @@ function ResultsPage() {
                             :
                             ''
                         }
-                        <p className='text-lg text-accent'> Deberias practicar aún mas este vocabulario. </p>
+                        <p className='text-lg text-accent'> {t(`pages.results.finalMessage.message${masteryCode}`)} </p>
                     </Box>
 
                     {/* Buttons */}
