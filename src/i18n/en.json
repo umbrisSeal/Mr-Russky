@@ -41,6 +41,8 @@
                 "secret": "Madre mia willy pero que haces aqui compañero."
             },
             "customMessage": {
+                "improvement_part1": "Great! You've improved your vocabulary by",
+                "improvement_part2": "since your last session!"
             }
         }
     },
