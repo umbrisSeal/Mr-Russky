@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box } from "@mui/material";
 import PageMotionWrapper from "../components/layout/PageMotionWrapper";
 import AnswersContainer from "../components/answersContainer/AnswersContainer";
@@ -20,12 +19,6 @@ function LessonPage() {
     const [currentExcerciceIndex, setCurrentExcerciceIndex] = useState<number>(0);
     const [currentProgress, setCurrentProgress] = useState<number>(0);
     const [showingAnswer, setShowingAnswer] = useState<boolean>(false);
-
-    // First of all, check if there is vocabulary to study. If recieve an empty string, return error.
-    if(lessonVocabulary.length === 0) {
-        navigateTo('/error');
-        return <React.Fragment></React.Fragment>
-    }
 
     function handleHintButton() {
         console.log("You have pressed HINT");
