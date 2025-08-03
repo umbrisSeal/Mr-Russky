@@ -7,7 +7,7 @@
 
 import { redirect, type LoaderFunctionArgs } from "react-router";
 import type { Noun } from "../../data/words/inflected/nouns/noun";
-import { exampleNouns } from "../../data/words/inflected/nouns/school";
+import { schoolNouns } from "../../data/words/inflected/nouns/school";
 import { shuffleVocabulary } from "../../utils/functions/shuffleVocabulary";
 import { useLessonVocabularyStore } from "../../hooks/lessonVocabulary";
 import { useLessonResultsStore } from "../../hooks/lessonResults";
@@ -23,7 +23,7 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
     const repeatLesson = url.searchParams.get("repeat") === '1';
     const repeatOnlyErrors = url.searchParams.get("errors") === '1';
 
-    const appVocabulary : Noun[] = exampleNouns;
+    const appVocabulary : Noun[] = schoolNouns;
     let lessonVocabulary : Noun[] = [];
 
     // Temporal way to filter the required vocabulary.
