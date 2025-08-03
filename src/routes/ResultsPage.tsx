@@ -20,6 +20,19 @@ function ResultsPage() {
     const totalWords = wrongAnswers.length + correctAnswers.length;
     const vocabularyMastery = (correctAnswers.length / totalWords) * 100;
 
+    // Calculate correct-ed answers, using correctAnswers and previousWrongAnswers.
+    const previousWrongWords = new Set(previousWrongAnswers.map((word) => word.id));
+    const correctedWords = correctAnswers.filter((word) => previousWrongWords.has(word.id));
+
+    /*
+        Missing:
+        - To calculate correctedWords correctly, we must know when to reset previousWrongAnswers:
+            - Keep previous wrong ansers only in: repeat lesson!
+
+        - Select the correct message depending on vocabulary mastery
+        - Calculate previous vocabulary mastery and inform if this was increased and for how much.
+    */
+
 
     function handleRepeatLesson() {
         navigateTo('/lesson?repeat=1');
@@ -57,7 +70,7 @@ function ResultsPage() {
                             <p className='text-xl'> {t('pages.results.incorrectWords')} </p>
                         </Box>
                         <Box className='text-secondary'>
-                            <p className='font-bold text-5xl'> 10 </p>
+                            <p className='font-bold text-5xl'> {correctedWords.length} </p>
                             <p className='text-xl'> {t('pages.results.correctedWords')} </p>
                         </Box>
                     </Box>
