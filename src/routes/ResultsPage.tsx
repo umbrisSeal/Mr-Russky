@@ -24,14 +24,10 @@ function ResultsPage() {
     const previousWrongWords = new Set(previousWrongAnswers.map((word) => word.id));
     const correctedWords = correctAnswers.filter((word) => previousWrongWords.has(word.id));
 
-    /*
-        Missing:
-        - To calculate correctedWords correctly, we must know when to reset previousWrongAnswers:
-            - Keep previous wrong ansers only in: repeat lesson!
-
-        - Select the correct message depending on vocabulary mastery
-        - Calculate previous vocabulary mastery and inform if this was increased and for how much.
-    */
+    // Calculate previous Vocabulary Mastery.
+    const previousVocabularyMastery = (previousCorrectAnswers.length / totalWords) * 100;
+    const vocabularyMasteryImprovement = vocabularyMastery - previousVocabularyMastery;
+    const repeatedLesson = previousCorrectAnswers.length + previousWrongAnswers.length !== 0;
 
 
     function handleRepeatLesson() {
@@ -98,9 +94,13 @@ function ResultsPage() {
 
                     {/* Messages */}
                     <Box className='text-center'>
-                        <p className='text-lg text-green'>
-                            ¡Genial! Mejoraste tu vocabulario en esta leccion un <span className='font-bold'>+6.02%</span> desde tu ultima sesion!
-                        </p>
+                        { repeatedLesson && vocabularyMasteryImprovement >= 0.01 ?
+                            <p className='text-lg text-green'>
+                                {t('pages.results.customMessage.improvement_part1')} <span className='font-bold'>+{vocabularyMasteryImprovement.toFixed(2)}%</span> {t('pages.results.customMessage.improvement_part2')}
+                            </p>
+                            :
+                            ''
+                        }
                         <p className='text-lg text-accent'> Deberias practicar aún mas este vocabulario. </p>
                     </Box>
 
