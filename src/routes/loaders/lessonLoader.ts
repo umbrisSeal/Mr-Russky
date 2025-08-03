@@ -17,20 +17,26 @@ export async function lessonLoader({request} : LoaderFunctionArgs ) : Promise<No
     const url = new URL(request.url);
     
     // Temporal params:
-    const studyAll = url.searchParams.get("studyAll");
-    
-    if(!studyAll) return []; // Wrong params recieved.
+    const studyAll = url.searchParams.get("studyAll") === '1';
+    const repeatLesson = url.searchParams.get("repeat") === '1';
+    const repeatOnlyErrors = url.searchParams.get("errors") === '1';
 
     const appVocabulary : Noun[] = exampleNouns;
     let lessonVocabulary : Noun[] = [];
 
-    if(studyAll === '1') {
+    // Temporal way to filter the required vocabulary.
+    if(studyAll) {
         // Study all vocabulary.
         lessonVocabulary = shuffleVocabulary(appVocabulary);
     } else {
         // Only study 10 random words.
         lessonVocabulary = shuffleVocabulary(appVocabulary.slice(0, 10));
     }
+
+    // In case of user repeating the same lesson.
+    if(repeatLesson) lessonVocabulary = shuffleVocabulary(lessonVocabularyStore.lessonVocabulary);
+    if(repeatOnlyErrors) lessonVocabulary = shuffleVocabulary(lessonResultsStore.wrongAnswers);
+
 
     lessonVocabularyStore.setLessonVocabulary([...lessonVocabulary]);
     lessonResultsStore.resetResults();
